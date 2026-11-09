@@ -1,0 +1,65 @@
+<div class="header-image-container">
+  <img ngSrc="assets/images/fsg_bigpic.jpg" alt="Formula Student Germany" class="header-image" height="1108" width="1440">
+  <span class="header-copyright">&copy; FSG Maru</span>
+</div>
+
+<span class="subtitle">{{ 'missionegnition.subtitle' | translate }}</span>
+
+<div class="text">
+  <p [innerHTML]="'missionegnition.mission' | translate"></p>
+</div>
+
+<form class="form-container">
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable' | translate }}</mat-label>
+    <input matInput type="number" name="amount" [(ngModel)]="donation.amount">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable2' | translate }}</mat-label>
+    <input matInput type="text" name="firstName" [(ngModel)]="donation.firstName">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable3' | translate }}</mat-label>
+    <input matInput type="text" name="lastName" [(ngModel)]="donation.lastName">
+  </mat-form-field>
+
+  <mat-radio-group name="certificate" [(ngModel)]="donation.certificate">
+    <mat-radio-button value="false" class="radio-button-white">{{ 'missionegnition.radio-button' | translate }}</mat-radio-button>
+    <mat-radio-button value="true" class="radio-button-white">{{ 'missionegnition.radio-button2' | translate }}</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable4' | translate }}</mat-label>
+    <input matInput type="text" name="address" [(ngModel)]="donation.address">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable5' | translate }}</mat-label>
+    <input matInput type="text" name="postalCode" [(ngModel)]="donation.postalCode">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable6' | translate }}</mat-label>
+    <input matInput type="text" name="city" [(ngModel)]="donation.city">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'missionegnition.mat-lable7' | translate }}</mat-label>
+    <input matInput type="text" name="note" [(ngModel)]="donation.note">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="sendDonation()">{{ 'missionegnition.button' | translate }}</button>
+</form>
+
+<div class="text">
+  <p [innerHTML]="'missionegnition.text' | translate"></p>
+</div>
+
+<div class="text">
+  <p [innerHTML]="'missionegnition.text2' | translate"></p>
+</div>
+
+

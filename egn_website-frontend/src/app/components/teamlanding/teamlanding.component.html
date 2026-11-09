@@ -1,0 +1,144 @@
+<header class="team-hero">
+  <figure class="header-image-container">
+    <img ngSrc="assets/team_landing_images/FSG_Kai_FormulaStudentGermany.jpg"
+         [alt]="'teamlanding.header_alt' | translate"
+         class="header-image" height="994" width="1440" priority>
+    <figcaption class="header-copyright">&copy; FSG Kai</figcaption>
+  </figure>
+
+  <h1 class="subtitle">{{ 'teamlanding.subtitle' | translate }}</h1>
+</header>
+
+<section class="team-actions">
+  <div class="cta-buttons">
+    <a mat-flat-button class="cta-button" [routerLink]="link('team/2026')">
+      {{ 'teamlanding.current_team' | translate }}
+    </a>
+    <button type="button" mat-flat-button class="cta-button"
+            aria-controls="previous-teams" [attr.aria-expanded]="showPrevious"
+            (click)="togglePrevious()">
+      {{ 'teamlanding.previous_teams' | translate }}
+    </button>
+    <a mat-flat-button class="cta-button" [routerLink]="link('joinus')">
+      {{ 'teamlanding.join_us' | translate }}
+    </a>
+  </div>
+
+  <!-- Links bleiben immer im Dokument (auch eingeklappt), damit Web-Crawler alle Team-Jahre finden können -->
+  <nav id="previous-teams" class="previous-teams" [class.open]="showPrevious"
+       [attr.aria-label]="'teamlanding.previous_teams' | translate"
+       [attr.inert]="showPrevious ? null : ''">
+    <ul class="year-grid">
+      @for (y of previousTeams; track y) {
+        <li>
+          <a class="year-card" [routerLink]="link('team/' + y)">
+            <span class="year-card-image">
+              <img [ngSrc]="getTeamImage(y)" fill [alt]="'teamlanding.team_alt' | translate:{ year: y }">
+            </span>
+            <span class="year-card-label">Team {{ y }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</section>
+
+<section class="team-intro">
+  <div class="text">
+    <p [innerHTML]="'teamlanding.text' | translate"></p>
+  </div>
+</section>
+
+<section class="departments" aria-labelledby="departments-heading">
+  <div class="departments-intro">
+    <h2 id="departments-heading" class="subtitle">{{ 'teamlanding.subtitle2' | translate }}</h2>
+    <div class="text">
+      <p>{{ 'teamlanding.text2' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Inline department sections -->
+  <app-slideshow-content-section
+    title="Chassis"
+    theme="light"
+    imageAlign="left"
+    [images]="['assets/team_landing_images/chassis.webp']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.chassis' | translate }}</li>
+      <li>{{ 'teamlanding.chassis2' | translate }}</li>
+      <li>{{ 'teamlanding.chassis3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+
+  <app-slideshow-content-section
+    title="Performance"
+    theme="dark"
+    imageAlign="right"
+    [images]="['assets/team_landing_images/performance.webp']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.performance' | translate }}</li>
+      <li>{{ 'teamlanding.performance2' | translate }}</li>
+      <li>{{ 'teamlanding.performance3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+
+  <app-slideshow-content-section
+    title="Aerodynamics"
+    theme="light"
+    imageAlign="left"
+    [images]="['assets/team_landing_images/aerodynamics.webp']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.aerodynamics' | translate }}</li>
+      <li>{{ 'teamlanding.aerodynamics2' | translate }}</li>
+      <li>{{ 'teamlanding.aerodynamics3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+
+  <app-slideshow-content-section
+    title="Electronics"
+    theme="dark"
+    imageAlign="right"
+    [images]="['assets/team_landing_images/electronics.webp']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.electronics' | translate }}</li>
+      <li>{{ 'teamlanding.electronics2' | translate }}</li>
+      <li>{{ 'teamlanding.electronics3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+
+  <app-slideshow-content-section
+    title="Embedded Systesms"
+    theme="light"
+    imageAlign="left"
+    [images]="['assets/images/fs_dyn.png']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.embedded' | translate }}</li>
+      <li>{{ 'teamlanding.embedded2' | translate }}</li>
+      <li>{{ 'teamlanding.embedded3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+
+  <app-slideshow-content-section
+    title="Driverless"
+    theme="dark"
+    imageAlign="right"
+    [images]="['assets/images/fs_dv.png']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.driverless' | translate }}</li>
+      <li>{{ 'teamlanding.driverless2' | translate }}</li>
+      <li>{{ 'teamlanding.driverless3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+
+  <app-slideshow-content-section
+    title="Operations"
+    theme="light"
+    imageAlign="left"
+    [images]="['assets/images/fs_statics.png']">
+    <ul class="bullets">
+      <li>{{ 'teamlanding.operations' | translate }}</li>
+      <li>{{ 'teamlanding.operations2' | translate }}</li>
+      <li>{{ 'teamlanding.operations3' | translate }}</li>
+    </ul>
+  </app-slideshow-content-section>
+</section>

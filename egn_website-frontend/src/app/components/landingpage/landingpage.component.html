@@ -1,0 +1,129 @@
+<div class="banner">
+  <div class="banner__slide">
+    <img src="assets/landing_images/landing_main.webp" alt="" fetchpriority="high"/>
+    <div class="banner__content">
+      <h2 class="banner__title">e-gnition Hamburg</h2>
+    </div>
+    <span class="landingpage-copyright">&copy; Timon Suhk</span>
+  </div>
+
+  <div class="banner__slide">
+    <img src="assets/landing_images/SUHK5973.webp" alt="" fetchpriority="low"/>
+    <div class="banner__content">
+      <h2 class="banner__title">{{ 'landingpage.banner_5973.text' | translate }}</h2>
+    </div>
+    <span class="landingpage-copyright">&copy; VDE E-Race, Timon Suhk</span>
+  </div>
+
+  <div class="banner__slide">
+    <img src="assets/landing_images/SUHK7550.webp" alt="" fetchpriority="low"/>
+    <div class="banner__content">
+      <h2 class="banner__title">{{ 'landingpage.banner_7550.text' | translate }}</h2>
+    </div>
+    <span class="landingpage-copyright">&copy; VDE E-Race, Timon Suhk</span>
+  </div>
+
+  <div class="banner__overlay"></div>
+</div>
+
+<!-- Spacing between banner and about us section -->
+<br>
+<br>
+<!-- END Spacing between banner and about us section -->
+
+<p class="lp-subtitle">{{ 'landingpage.subtitle' | translate }}</p>
+<h1 class="lp-headline">{{ 'landingpage.lp-headline' | translate }}</h1>
+<div class="lp-sep"></div>
+ 
+<!-- TEAM SECTION -->
+<section class="lp-team">
+  <p class="lp-team__eyebrow">{{ 'landingpage.lp-team__eyebrow' | translate }}</p>
+  <h2 class="lp-headline lp-team__heading">{{ 'landingpage.teamTitle' | translate }}</h2>
+ 
+  <div class="lp-stats">
+    <div class="lp-stat">
+      <span class="lp-stat__num">70+</span>
+      <span class="lp-stat__label">{{ 'landingpage.lp-stat__label_1' | translate }}</span>
+    </div>
+    <div class="lp-stat">
+      <span class="lp-stat__num">{{ jahre }}</span>
+      <span class="lp-stat__label">{{ 'landingpage.lp-stat__label_2' | translate }}</span>
+    </div>
+    <div class="lp-stat">
+      <span class="lp-stat__num">2011</span>
+      <span class="lp-stat__label">{{ 'landingpage.lp-stat__label_3' | translate }}</span>
+    </div>
+  </div>
+ 
+  <div class="landingpage-text" [innerHTML]="'landingpage.teamText' | translate"></div>
+
+</section>
+
+<br>
+<!-- LINK CARDS -->
+<div class="lp-cards">
+
+  <a class="lp-card" (click)="navigateTo('joinus')" [attr.aria-label]="'landingpage.links.joinUs' | translate">
+    <div class="lp-card__inner">
+      <div class="lp-card__front">
+        <div class="lp-card__img" style="--bg: url('assets/images/joinus.jpg')"></div>
+        <div class="lp-card__overlay"></div>
+        <div class="lp-card__label">
+          <h3>{{ 'landingpage.links.joinUs' | translate }}</h3>
+        </div>
+      </div>
+      <div class="lp-card__back">
+        <h3>{{ 'landingpage.links.joinUs' | translate }}</h3>
+        <span class="lp-card__back-arrow">›</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="lp-card" (click)="navigateTo('team')" [attr.aria-label]="'landingpage.teamTitle' | translate">
+    <div class="lp-card__inner">
+      <div class="lp-card__front">
+        <div class="lp-card__img" style="--bg: url('assets/team_landing_images/FSG_Kai_FormulaStudentGermany.jpg')"></div>
+        <span class="landingpage-copyright">&copy; FSG Kai</span>
+        <div class="lp-card__overlay"></div>
+        <div class="lp-card__label">
+          <h3>{{ 'landingpage.teamTitle' | translate }}</h3>
+        </div>
+      </div>
+      <div class="lp-card__back">
+        <h3>{{ 'landingpage.teamTitle' | translate }}</h3>
+        <span class="lp-card__back-arrow">›</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="lp-card lp-card--supporters" (click)="navigateTo('supporters')" [attr.aria-label]="'landingpage.links.supporters' | translate">
+    <div class="lp-card__inner">
+      <div class="lp-card__front">
+        <div class="stage">
+          <div class="sponsor-marquee" aria-hidden="true">
+            @for (row of sponsorLogoRows; track $index) {
+              <div class="sponsor-marquee__row">
+                <div class="sponsor-marquee__track">
+                  @for (sponsor of row; track $index) {
+                    <img class="sponsor-marquee__logo" [src]="sponsor.logo" [alt]="sponsor.name">
+                  }
+                  @for (sponsor of row; track 'duplicate-' + $index) {
+                    <img class="sponsor-marquee__logo" [src]="sponsor.logo" [alt]="sponsor.name">
+                  }
+                </div>
+              </div>
+            }
+            </div>
+          </div>
+        <div class="lp-card__label lp-card__label--dark">
+          <h3>{{ 'landingpage.links.supporters' | translate }}</h3>
+        </div>
+      </div>
+      <div class="lp-card__back">
+        <h3>{{ 'landingpage.links.supporters' | translate }}</h3>
+        <span class="lp-card__back-arrow">›</span>
+      </div>
+    </div>
+  </a>
+
+</div>

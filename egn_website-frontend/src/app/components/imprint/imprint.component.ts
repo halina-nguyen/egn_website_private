@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+ 
+import {NgOptimizedImage} from '@angular/common';
+
+@Component({
+  selector: 'app-imprint',
+  imports: [
+    NgOptimizedImage
+  ],
+  templateUrl: './imprint.component.html',
+  styleUrl: './imprint.component.scss'
+})
+export class ImprintComponent {
+
+}

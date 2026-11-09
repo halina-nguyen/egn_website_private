@@ -1,0 +1,46 @@
+<div class="header-image-container">
+  <img ngSrc="assets/images/fsg_bigpic.jpg" alt="Formula Student Germany" class="header-image" height="1108" width="1440">
+  <span class="header-copyright">&copy; FSG Maru</span>
+</div>
+
+<span class="subtitle">{{ 'ui.supporters_of_season' | translate:{ season: season } }}</span>
+
+<div class="supporters-container">
+  <section [id]="cl.name" class="supporter-card" *ngFor="let cl of supporterlist">
+    <h1 class="supporter-title">{{ cl.name }}</h1>
+    
+    <div class="supporter-card-content">
+      <div class="supporter-grid">
+        <div class="supporter-item" *ngFor="let supporter of cl.supporters">
+          <img src="{{supporter.logo}}" 
+               [alt]="supporter.name" 
+               class="supporter-image"
+               (click)="onSponsorClick(supporter)"
+               [class.has-text]="supporter.text"
+               [class.active]="selectedSponsor === supporter">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<div class="modal-overlay" *ngIf="selectedSponsor" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="closeModal()">×</button>
+    
+    <div class="modal-header">
+      <img src="{{selectedSponsor.logo}}" [alt]="selectedSponsor.name" class="modal-logo">
+      <h2>{{ selectedSponsor.name }}</h2>
+    </div>
+    
+    <div class="modal-body">
+      <p class="supporter-text" *ngIf="selectedSponsor.text">{{ selectedSponsor.text }}</p>
+      <p class="no-text" *ngIf="!selectedSponsor.text">{{ 'ui.no_information' | translate }}</p>
+    </div>
+    
+    <div class="modal-footer" *ngIf="selectedSponsor.website">
+      <a [href]="selectedSponsor.website" target="_blank" class="website-link">{{ 'ui.visit_website' | translate }}</a>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,53 @@
+<h1>Team {{ year }}</h1>
+<hr class="divider">
+
+<!-- Department-Auswahl -->
+<nav class="department-nav" aria-label="Abteilungen">
+  @for (department of departments; track department.slug) {
+    <a [attr.href]="pagePath + '#' + department.slug"
+       (click)="onNavClick($event, department.slug)">{{ department.name }}</a>
+  }
+</nav>
+
+@for (department of departments; track department.slug; let firstDepartment = $first) {
+  <section [id]="department.slug" [attr.aria-labelledby]="department.slug + '-heading'">
+    <h2 [id]="department.slug + '-heading'">{{ department.name }}</h2>
+    <br>
+    <ul class="image-grid">
+      @for (member of department.members; track $index; let firstMember = $first) {
+        <li class="image-item">
+          <figure>
+            <img [ngSrc]="member.image"
+                 width="300"
+                 height="480"
+                 [priority]="firstDepartment && firstMember"
+                 (error)="onImageError($event)"
+                 [alt]="'teampage.member_alt' | translate:{ name: member.name, job: member.job, year: year }">
+            <figcaption>
+              <h3 class="member_title">{{ member.name }}</h3>
+              <p class="member_info">{{ member.job }}</p>
+            </figcaption>
+          </figure>
+          @if (member.email) {
+            <br>
+            <div class="member_info">
+              <button type="button"
+                      class="button"
+                      (click)="onContactClick(member)"
+                      [attr.aria-label]="'teampage.contact_aria' | translate:{ name: member.name }">{{ 'teampage.contact' | translate }}</button>
+            </div>
+          }
+        </li>
+      }
+    </ul>
+  </section>
+  <hr class="divider">
+}
+
+<!-- Interne Verlinkung: jede Jahresseite verlinkt auf Übersicht und alle anderen Jahre -->
+<nav class="department-nav year-nav" [attr.aria-label]="'teampage.other_years' | translate">
+  <a [routerLink]="link('team')">{{ 'teampage.all_teams' | translate }}</a>
+  @for (y of otherYears; track y) {
+    <a [routerLink]="link('team/' + y)">Team {{ y }}</a>
+  }
+</nav>

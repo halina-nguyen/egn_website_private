@@ -1,0 +1,41 @@
+<div class="joinus-image-wrapper">
+  <img ngSrc="assets/images/joinus_big.png" alt="Join Us" class="joinus-image" height="750" width="1426">
+</div>
+
+<div class="joinus-content-wrapper">
+  <h1 class="joinus-title">{{ 'joinus.joinus-title' | translate }}</h1>
+  <h2 class="joinus-subtitle">{{ 'joinus.joinus-subtitle' | translate }}</h2>
+  <p class="joinus-text" [innerHTML]="'joinus.joinus-text' | translate"></p>
+
+  <!-- Top shortcut button to application form -->
+  <div class="joinus-top-button-wrapper">
+    <a class="joinus-link-btn" aria-label="Direkt zum Bewerbungsformular oben">
+      <button mat-flat-button class="joinus-button joinus-button--top" (click)="applicationClick()"><p [innerHTML]="'joinus.joinus-button--top' | translate"></p></button>
+    </a>
+  </div>
+
+  <span class="subtitle">{{ 'joinus.subtitle' | translate }}</span>
+  <div class="text">
+    <p [innerHTML]="'joinus.text' | translate"></p>
+  </div>
+
+
+  <span class="subtitle">{{ 'joinus.subtitle2' | translate }}</span>
+  <div class="text">
+    <p [innerHTML]="'joinus.text2' | translate"></p>
+  </div>
+
+  <div class="text">
+    <p [innerHTML]="'joinus.text3' | translate"></p>
+  </div>
+
+  <div class="text">
+    <p [innerHTML]="'joinus.text4' | translate"></p>
+  </div>
+
+  <a class="joinus-link-btn" aria-label="Direkt zum Bewerbungsformular unten">
+    <button mat-flat-button class="joinus-button joinus-button--bottom" (click)="applicationClick()">{{ 'ui.application_form_today' | translate }}</button>
+  </a>
+
+  
+</div>

@@ -1,0 +1,297 @@
+{
+  "ui": {
+    "close_menu": "Menü schließen",
+    "open_menu": "Menü öffnen",
+    "subscribe_newsletter": "Newsletter\nabonnieren",
+    "become_supporter": "Unterstützer\nwerden",
+    "join_team": "Team\nbeitreten",
+    "all_rights_reserved": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "data_protection": "Datenschutz",
+    "contact": "Kontakt",
+    "find_us_here": "Hier findest du uns",
+    "our_university": "Unsere Universität",
+    "rollout_description": "Sei dabei, wenn wir den egn26 vorstellen, unseren neuen Formula-Student-Rennwagen für diese Saison!",
+    "entry_from": "Einlass ab 18:00 Uhr",
+    "register_here": "Hier anmelden →",
+    "event_participations": "Unsere Veranstaltungsteilnahmen",
+    "supporters_of_season": "Unterstützer der Saison {{season}}",
+    "previous_image": "Vorheriges Bild",
+    "next_image": "Nächstes Bild",
+    "royal_first_class_partner": "Royal-First-Class-Partner",
+    "newsletter_heading": "Abonniere unseren Newsletter",
+    "email_address": "E-Mail-Adresse",
+    "electric_dynamics_title": "Dynamics",
+    "statics_title": "Statics",
+    "driverless_title": "Driverless",
+    "garage_alt": "Die e-gnition-Garage",
+    "no_information": "Keine Informationen verfügbar",
+    "visit_website": "Website besuchen",
+    "application_form_today": "Fülle noch heute unser Bewerbungsformular aus"
+  },
+  "mainsponsor":{
+    "contact": "Interesse an einer Partnerschaft?",
+    "contact_button": "Kontakt aufnehmen",
+    "more_partners": "Weitere Partner",
+    "royal_partner": "Royal First Class Partner",
+    "university_partner": "Hochschulpartner"
+  },
+  "landingpage": {
+    "banner_5973": {
+    "title": "Team",
+    "text": "Leidenschaft trifft Technik"
+    },
+    "banner_7550": {
+      "title": "Formula Student",
+      "text": "Bereit für den Wettbewerb"
+    },
+    "lp-headline": "Entdecken Sie die Leidenschaft für den Motorsport",
+    "subtitle": "Formula Student Team der Technischen Universität Hamburg",
+    "lp-team__eyebrow": "Über uns",
+    "lp-stat__label_1": "Studenten",
+    "lp-stat__label_2": "Jahre aktiv",
+    "lp-stat__label_3": "Gegründet",
+    "teamTitle": "Unser Team",
+    "teamText": "Wir, die Mitglieder von e-gnition, entwickeln seit 2011 jedes Jahr einen neuen elektrischen und autonom fahrenden Rennwagen, um damit in internationalen Wettbewerben der Formula Student zu starten.<br><br>Unser Team besteht aktuell aus ca. 70  Studierenden der Technischen Universität Hamburg und umliegenden Hochschulen und Universitäten. Jedes Jahr stellen wir uns neu auf und erarbeiten ein Rennwagenkonzept, um auch in der nächsten Saison aktiv am Renngeschehen der Formula Student teilnehmen zu können.<br><br>In den vergangenen 15 Jahren haben wir erfolgreich Innovationen und Fortschritte erzielen können. Doch wir stellen uns jedes Jahr auf’s Neue der Herausforderung, neue Höhen und Rekorde zu erzielen!",
+    "links": {
+      "joinUs": "Mitmachen",
+      "ourTeam": "Unser Team",
+      "supporters": "Unterstützer"
+    }
+  },
+    "formulastudent":{
+      "subtitle": "Formula Student",
+      "text":"<strong>Formula Student ist der größte Ingenieurwettbewerb der Welt. </strong><br>Jedes Jahr nehmen bis zu 600 Teams von Universitäten aus der ganzen Welt an diesem Wettbewerb teil. Die Veranstaltungen der Formula Student finden überall auf der Welt statt und ziehen viele interessierte Studierende, Unternehmen und Rennsportfans an die großen Rennstrecken. Besonders ist dieser Wettbewerb dadurch, dass der Fokus nicht nur auf den Rennen (dynamischen Disziplinen), sondern auch auf anderen Ingenieursfähigkeiten (statischen Disziplinen) liegt. Das Ziel der Formula Student ist es, Studierenden die Möglichkeit zu geben, das an der Universität gelernte Wissen in einem praktischen Umfeld anzuwenden. Dabei bietet sie auch die Möglichkeit, wichtige Aspekte des zukünftigen Arbeitslebens kennenzulernen, wie Projektmanagement, Teamarbeit und wirtschaftliche Entscheidungen bei der Konstruktion.<br><br><strong>e-gnition nimmt als Hamburger Team mit Sitz an der Technischen Universität seit 2012 an diesem Wettbewerb teil.</strong> <br>Wir bieten interessierten Studierenden beinahe jedes Jahr die Möglichkeit, sowohl die gesamte Konstruktion als auch den Bau des Rennwagens selbst zu erleben. Was e-gnition außerdem besonders macht, ist die Tatsache, dass der Antrieb unserer Rennwagen seit Beginn der ersten Saison immer elektrisch war. Außerdem nimmt e-gnition seit dem ersten fahrerlosen Wettbewerb in der Formula Student Germany in dieser Disziplin teil.<br>",
+      "electric_dynamics":"Wir treten in verschiedenen dynamischen Disziplinen an, um die Leistung und das Handling unseres Rennwagens zu testen und mit anderen Teams zu messen.",
+      "statics": "Wir präsentieren das Konzept unseres Rennwagens vor einer Jury aus Experten um zu beweisen, dass unser Fahrzeug nicht nur schnell fährt, sondern auch sicher und gut durchdacht ist.",
+      "driverless": "Wir entwickeln Software um unseren Rennwagen autonom fahren zu lassen."
+  },
+  "nav": {
+    "formulastudent": "Formula Student",
+    "team": "Team",
+    "garage": "Garage",
+    "supporters": "Unterstützer",
+    "news": "News",
+    "aboutus": "Über uns"
+  },
+  "teampage": {
+    "member_alt": "Portrait von {{name}}, {{job}}, e-gnition Hamburg e.V. {{year}}",
+    "contact": "Kontakt",
+    "contact_aria": "E-Mail an {{name}}",
+    "all_teams": "Alle Teams",
+    "other_years": "Weitere Teams"
+  },
+  "teamlanding": {
+    "header_alt": "Das Team von e-gnition Hamburg feiert den Sieg bei der Formula Student Germany 2026",
+    "team_alt": "Teamfoto e-gnition Hamburg {{year}}",
+    "subtitle": "Ein Auto. Ein Team.",
+    "current_team": "Aktuelles Team",
+    "previous_teams": "Vorherige Teams",
+    "join_us": "Tritt uns bei",
+    "text": "<p><strong>e-gnition Hamburg ist das Formula-Student-Team der Technischen Universität Hamburg – und weit mehr als das:</strong> <br> Seit unserer Gründung im Jahr 2011 entwickeln wir jedes Jahr mit über 70 engagierten Studierenden einen elektrischen Rennwagen. Seit 2018 bauen wir zusätzlich ein autonom fahrendes Fahrzeug. Unser Ziel: Innovation auf die Strecke bringen – bei den internationalen Wettbewerben der Formula Student.<br><br><strong>Interdisziplinarität und hochschulübergreifende Zusammenarbeit</strong><br>Wir arbeiten interdisziplinär und hochschulübergreifend: Unsere Teammitglieder stammen aus verschiedensten Fachrichtungen – von Ingenieurwissenschaften über Informatik bis hin zu Design, BWL oder Kommunikation. Neben der TU Hamburg sind auch Studierende weiterer Hochschulen aus Hamburg, Bremen und Schleswig-Holstein Teil unseres Teams.<br><br><strong>Was uns verbindet? Die Leidenschaft für Technik, Präzision und Teamwork. </strong><br>Bei e-gnition treffen Hightech und Projektmanagement auf echten Rennsportgeist. Gemeinsam meistern wir Herausforderungen in:<br></p><ul><li>Elektrotechnik – vom Antrieb über Leistungselektronik bis zu Sicherheitssystemen</li><li>Softwareentwicklung – insbesondere im Bereich autonomes Fahren und Regelungstechnik</li><li>Maschinenbau und Konstruktion – Fahrwerk, Aufhängung, Aerodynamik und Fertigung</li><li>Management und Kommunikation – Sponsoring, Veranstaltungsplanung, soziale Medien und Teamorganisation</li></ul><p>Technikbegeisterung, Teamgeist und der Mut, Neues zu wagen – mit elektrischen und autonomen Rennfahrzeugen gestalten wir als Team aktiv die Mobilität von morgen.</p>",
+    "subtitle2": "Unsere Abteilungen",
+    "text2": "Hier gibt es eine kurze Übersicht über unsere Abteilungen und eine stichpunktartige Übersicht der Hauptaufgaben. Alle unsere Abteilungen arbeiten interdisziplinär und eng zusammen. Du hast Fragen? Melde dich bei uns!",
+    "chassis": "Konstruktion und Fertigung des Monocoques",
+    "chassis2": "Sicherheitskonzepte und Ergonomie",
+    "chassis3": "Materialauswahl, -tests und -analysen",
+    "performance": "Konstruktion und Fertigung von Fahrwerks-, Lenkungs- und Bremssystemen",
+    "performance2": "Simulation der Fahrdynamik",
+    "performance3": "Konstruktion und Analyse von Getriebe, Radträgern und FDS",
+    "aerodynamics": "Konstruktion und Fertigung des Aerodynamik-Pakets",
+    "aerodynamics2": "CFD-Simulationen und weitere Simulationen zur Validierung der relevanten Zielwerte",
+    "aerodynamics3": "Windkanal- und Fahrzeugtests",
+    "electronics": "Konstruktion und Fertigung des Akkus",
+    "electronics2": "Planung, Bestückung und Testen von PCBs",
+    "electronics3": "Kabelbaumbau und -einbau",
+    "embedded": "Entwicklung eigener Platinen",
+    "embedded2": "Programmieren von Steuerelementen (Torque Vectoring)",
+    "embedded3": "Entwicklung und Einbau von Sensorik und Telemetrie",
+    "driverless": "Integration der Sensorik (Lidar und Radar)",
+    "driverless2": "Pfadplanung",
+    "driverless3": "Objekterkennung, SLAM",
+    "operations": "Social Media Management",
+    "operations2": "Veranstaltungsplanung und -durchführung",
+    "operations3": "Sponsoringmanagement"
+   },
+   "garagelanding":{
+    "subtitle": "Fortschritt in jeder Saison",
+    "text": "Seit 2011 konstruieren und bauen wir jährlich einen neuen elektrischen Rennwagen. Jede Saison setzt sich dabei das Ziel, mit dem Wagen neue Höhepunkte zu erreichen. Hier gibt es einen Überblick über alle Fahrzeuge der Vereinsgeschichte.<br><br>Einzelne Rennwagen haben bedeutende technische Meilensteine erreicht, die unsere Entwicklung stark vorangetrieben haben.<br>Besonders interessante Rennautos aus technischer Perspektive sind:<br><ul><li>der egn12 als unser allererstes Fahrzeug</li><li>der egn15 mit dem ersten Monocoque und Aerodynamik-Paket</li><li>der egn17ev als erstes allradbetriebenes Fahrzeug und der egn17dv als erstes autonom fahrendes Auto</li><li>der egn20/egn21 als erstes Fahrzeug, das das autonome Fahrsystem und den Fahrer im selben Wagen vereint</li><li>der egn24 mit einem neuen LiDAR-Sensor-Setup</li></ul>Du kannst hier mehr über jeden einzelnen Wagen erfahren.",
+    "subtitle2": "Unsere Autos"
+   },
+   "garagedetail":{
+    "season": "Saison",
+    "events": "Besuchte Veranstaltungen",
+    "details": "Technische Details",
+    "advancements": "Wichtige Fortschritte",
+    "achievements": "Erfolge"
+   },
+   "supporterslanding": {
+      "subtitle": "Starke Partnerschaften - Starkes Team",
+      "text": "Neben dem ambitionierten Team erfordert der Bau eines neuen Rennwagens jedes Jahr auch starke Partnerschaften und Unterstützer. Insbesondere die Technische Universität Hamburg und die mit ihr verbundenen Institute stehen uns als Heimat unserer Werkstatt und unseres Geschehens sehr nahe. Doch auch unsere Sponsoren tragen einen bedeutenden Anteil an der Umsetzung unseres Projekts.<br>Zusätzlich profitieren wir auch von der organisierten Vernetzung ehemaliger Mitglieder im Alumniverein.<br>Als gemeinnütziger Verein ist unser Team auch auf Spenden angewiesen, die von Privatpersonen und Unternehmen oder andere Institutionen an uns gerichtet werden können.<br><br>Wir sind sehr dankbar über die vielen Formen der Unterstützung, die wir erhalten und freuen uns über die engen Partnerschaften und Kooperationen!<br><br>Erfahre hier mehr über unsere Unterstützer und wie Du selbst einer werden kannst:",
+      "sponsors":{
+        "title": "Lerne unsere Sponsoren und Unterstützer kennen!"
+      },
+      "supporters":{
+        "title": "Freunde und Förderer des e-gnition Hamburg e.V."
+      },
+      "universitypartner":{
+        "title": "Hochschulpartner"
+      },
+      "supportus":{
+        "title": "Entdecke mehr Wege, uns zu unterstützen"
+      }
+   },
+   "news": {
+      "subtitle": "#1000Strom direkt ins Postfach - Newsletter",
+      "text":"Erlebe #1000Strom über die gesamte Saison: von der ersten Konzeptidee über die Fertigung bis hin zum Rollout – dem offiziellen Startschuss für unser neues Rennauto, den egns. Danach heißt es Vollgas geben und Gänsehautmomente auf den europäischen Rennstrecken erleben.<br><br>Mit unserem Newsletter bekommst Du die volle Ladung #1000Strom – exklusive Einblicke, Teamgeschichten und Neuigkeiten direkt dann, wenn’s bei e-gnition knistert."
+   },
+   "aboutus": {
+      "subtitle": "Über uns",
+      "text": "Der e-gnition Hamburg e.V. ist das Formula-Student-Team der Technischen Universität Hamburg. Seit der Gründung 2011 hat sich das Team zum Ziel gesetzt, jährlich mit einem elektrisch betriebenen und seit 2017 autonomen Rennwagen an den internationalen Wettbewerben der Formula Student teilzunehmen.<br><br>Das Team besteht aus circa 70 Studierenden der Technischen Universität Hamburg und umliegenden Universitäten und Hochschulen. Die Teamstruktur ist so aufgestellt, dass überwiegend aktive Studierende die Leitung und Planung des Projekts eigenverantwortlich übernehmen und umsetzen.<br><br>Jährlich wachsen sowohl die Anforderungen, die e-gnition Hamburg an sich selbst stellt, als auch diejenigen, welche durch das Formula-Student-Regelwerk vorgegeben werden. Mit Ehrgeiz und Engagement widmet sich jährlich auch eine neue Generation diesen Herausforderungen und präsentiert mit Stolz die Ergebnisse der harten Arbeit mit dem aktuellen Wagen der Saison.<br><br>"
+   },
+   "ourevents":{
+      "fs-subtitle": "Seit 2012 auf den Rennstrecken Europas",
+      "fs-text": "Bereits in der Gründungssaison hat es unser Team mit dem egn12 auf die ersten internationalen Wettbewerbe in Europa geschafft. Seitdem nehmen wir jährlich an den Wettbewerben der Formula Student teil und haben insgesamt an acht verschiedenen Veranstaltungen teilgenommen.<br><br>Hier kannst du mehr über unsere Veranstaltungsteilnahmen erfahren:"
+   },
+   "joinus":{
+      "joinus-title": "Tritt uns bei",
+      "joinus-subtitle": "Werde Teil unseres Teams",
+      "joinus-text": "Wir wollen uns immer weiterentwickeln und freuen uns daher immer über motivierten Zuwachs im Team!<br>Du hast Interesse an der Praxis in einem Rennsportverein und würdest dir das gerne mal genauer anschauen? Dann bist du hier genau richtig!",
+      "joinus-button--top": "Direkt zum Bewerbungsformular",
+
+      "subtitle": "Was wir bieten",
+      "text": "<ul><li>Du tauchst schnell in das Projekt ein und lernst die Grundlagen und Details von Konstruktion, Planung und Fertigung kennen</li><li>Du kannst eigene Ideen einbringen und das Projekt weiterbringen</li><li>Du lernst moderne Fertigungsverfahren und -technologien kennen</li><li>Du erhältst die Chance, Formula Student Events als Teammitglied auf den Rennstrecken Europas zu erleben</li><li>Du bist Mitglied in einem hilfsbereiten, engagierten und nettem Team</li><li>Du kannst in alle Bereiche unserer Tätigkeiten reinschauen und dich innerhalb des Teams entwickeln</li><li>Du gewinnst Kontakte zu tollen Unternehmen, die uns unterstützen</li></ul>",
+      "subtitle2": "Was solltest du mitbringen?",
+      "text2": "<ul><li>Motivation für die Arbeit an einem großen Projekt</li><li>Gute Deutsch- oder Englischkenntnisse</li><li>Fähigkeit, strukturiert und selbstständig an Projekten zu arbeiten</li><li>Bereitschaft, für die Einhaltung von Deadlines Zeit zu investieren</li><li>Wünschenswert, aber kein Muss:</li><ul><li>Interesse an der Automobilbranche oder am Rennsport</li><li>Begeisterung für neue Technologien</li><li>Erfahrung mit spezifischen Fertigungstechnologien, -materialien, etc.</li></ul></ul>",
+      "text3": "Grundsätzlich gilt, dass jede/r bei uns willkommen ist! Was Du noch nicht weißt, bringen wir Dir bei und arbeiten Dich sorgfältig auch ohne Vorkenntnisse in Deinem Bereich ein.<br>Wir empfehlen Dir jedoch, dass du nicht direkt als Erstsemester bei uns einsteigst, da dort der Fokus noch auf dem Studieneinstieg liegen sollte. Wenn Formula Student jedoch DEINE Berufung ist, melde Dich gern bei uns.<br><br>Im Moment suchen wir in den folgenden Abteilungen und Bereichen besonders Unterstützung. Du kannst Dich jedoch trotzdem für alle anderen Bereiche auch bewerben - Wir freuen uns auf Dich!",
+      "text4":  "<ul><li>Operations</li><ul><li>Foto- und Videografie</li><li>Finanzen und Sponsoring</li><li>Veranstaltungsplanung/Teambuilding</li><li>Grafikdesign</li></ul><li>Electronics</li><ul><li>PCB-Design und -Zusammenbau</li><li>Akkukonstruktion und -bau</li><li>Teststandplanung und -durchführung</li></ul><li>Embedded</li><ul><li>Softwareprogrammierung</li></ul></ul>"
+   },
+   "missionegnition":{
+      "subtitle": "Mission e-gnition",
+      "mission": "Mit Mission e-gnition kannst auch Du ein/e Unterstützer/in unseres Projekts werden!<br>Mit einer Spende ab 25 Euro kannst Du eine Zellpatenschaft erwerben und Dich auf unserer Akkubox mit einer Unterschrift verewigen.<br>Damit bist auch Du auf unseren Events mit dabei - am Herzstück unseres Wagens!<br><br>Fülle dafür gern das untenstehende Formular aus.<br><br>Vielen Dank für Dein Interesse und Deine Unterstützung!",
+      "mat-lable": "Wie viel möchten Sie spenden?",
+      "mat-lable2": "Vorname",
+      "mat-lable3": "Nachname",
+      "radio-button": "Ich benötige keine Spendenbescheinigung",
+      "radio-button2": "Ich benötige eine Spendenbescheinigung an folgende Adresse:",
+      "mat-lable4": "Straße und Hausnummer",
+      "mat-lable5": "Postleitzahl",
+      "mat-lable6": "Ort",
+      "mat-lable7": "Anmerkung",
+      "button": "Unterstützer werden [1]",
+      "text": "Spendenzahlung per Überweisung: <br>Kontoinhaber: e-gnition Hamburg e.V.<br>IBAN: DE19 2005 0550 1274 1289 31<br>Verwendungszweck: Spende Akku-Patenschaft – Name<br>",
+      "text2": "Du kannst uns auch passiv und ohne Mehrkosten mit Deinen Online-Einkäufen unterstützen. <br>Mehr Informationen findest Du hier: <a href='https://www.gooding.de/e-gnition-hamburg-e-v-8762'>https://www.gooding.de/e-gnition-hamburg-e-v-8762</a>"
+   },
+   "supportersseasons":{
+      "subtitle": "Starke Partnerschaften - Starkes Team",
+      "text": "Unser Verein lebt von den vielen Partnerschaften, die durch Sponsorings und Spenden entstehen. Wir sind dankbar darüber, mittlerweile über 120 starke Partnerschaften mit Großkonzernen, kleinen und mittelständischen Unternehmen, Fertigern und Dienstleistern jährlich zu pflegen und erhalten zu dürfen.<br><br>Lerne hier die Unterstützer unserer jeweiligen Saisons kennen!<br><br>Hast Du Interesse, mit deinem Betrieb auch unser Team zu unterstützen? Dann kontaktiere uns gern über das <a href='/contact'>Kontaktformular</a>."
+   },
+   "alumniverein":{
+      "subtitle": "Wer sind wir?",
+      "text": "Der Förderverein entstand am Ende der zweiten Formula-Student-Saison des Hauptvereins „e-gnition Hamburg e.V.“ im Sommer 2013 aus einer kleinen Gruppe ehemaliger Teammitglieder. Seit November 2015 können, wie es der Name „Freunde und Förderer des e-gnition Hamburg e.V.“ beschreibt, alle Alumni, Unterstützer und auch Unternehmen dem Förderverein beitreten.",
+      "subtitle2": "Zusammenarbeit mit dem aktiven Team",
+      "text2": "Als Förderverein wollen wir in Koordination mit dem Vorstand des aktiven Rennteams eine beständige und erfolgreiche Zukunft durch Erhalt und stetige Weiterentwicklung des Teams schaffen. Wir haben uns die ideelle und finanzielle Förderung unseres Teams auf die Fahnen geschrieben. Dafür halten wir einen engen Kontakt zum aktiven Team.<br>Es finden regelmäßige Diskussionen über alte und neue Konzeptideen statt. Außerdem unterstützen wir das Team bei den Eventvorbereitungen, z.B. durch ein beratendes Pre-Scrutineering oder durch einen Besuch beim Testtag, inklusive mitgebrachter Verpflegung für alle fleißigen Tester. Nach Möglichkeit unterstützt der Förderverein aus seinen vorhandenen Mitteln und durch die Mitglieder das Team auch finanziell.<br>Ein besonderer Teil dieser Unterstützung sind die jährlichen Akkupatenschaften, die durch unsere Mitglieder auf dem Rollout des neuen Boliden gemeinsam abgeschlossen werden. Darüber hinaus bietet der Alumniverein Kontakte in Forschung und Industrie und somit den Zugang zu interessanten Themen für mögliche Praktikumsplätze oder Abschlussarbeiten für aktive Teammitglieder.<br>",
+      "subtitle3": "Was machen wir noch?",
+      "text3": "Irgendwann geht die Studienzeit und somit spätestens auch die Zeit im aktiven Team zu Ende. Neben der Unterstützung des Hauptvereins wollen wir auch die Vernetzung der ehemaligen und aktuellen Teammitglieder, Sponsoren und Fans beflügeln. Neben der jährlichen Vollversammlung treffen sich die Mitglieder des Fördervereins zu gemeinsamen Veranstaltungen wie:<br><ul><li>Rollout</li><li>Grillen bei einem Testtag</li><li>Pokerabende</li><li>Kartfahren</li><li>Unterstützung des Teams bei den Formula-Student-Veranstaltungen vor Ort</li></ul>",
+      "subtitle4": "Die Formulare zum Beitritt in den Verein der Freunde und Förderer des e-gnition Hamburg e.V.",
+      "button": "Beitrittsdokumente",
+      "button2": "Beitragsordnung",
+      "button3": "Vereinssatzung",
+      "subtitle5": "Kontakt"
+    },
+    "universitypartners":{
+      "subtitle": "Unsere Universität als Fundament",
+      "text": "Die Technische Universität Hamburg (TUHH) stellt mit ihren Räumlichkeiten einen der bedeutenden Anteile zum Bestehen des Vereins zur Verfügung.<br>Wir freuen uns über die aktive Unterstützung nicht nur durch die Universität selbst, sondern auch durch die einzelnen Institute, welche uns erheblich in der Fertigung unterstützen und stets bei Fragen zur Verfügung stehen.<br><br>Mit der TUHH befinden wir uns daher in ständigem Austausch - und profitieren voneinander: Nicht nur bietet uns die TUHH die Grundlagen und Unterstützung für unsere Aktivitäten, auch wir tragen zur ingenieurstechnischen Ausbildung an der Universität bei. Indem wir fachliche Kenntnisse im Rahmen unseres Projektes durch die Praxis und Projektverantwortung für Bauteile vertiefen sowie das interdisziplinäre Arbeiten näher an die Studierenden bringen, ergänzen wir das fachliche Angebot an der TUHH um ein zielführendes Projekt.<br><br>Lerne die TUHH und die unterstützenden Institutionen hier kennen:"
+    },
+    "contact":{
+      "subtitle": "Kontakt",
+      "text": "Sie haben noch Fragen? Nutzen Sie gerne das Kontaktformular oder schreiben Sie uns eine E-Mail an:",
+      "lable": "Name",
+      "lable2": "E-Mail",
+      "lable3": "Telefon (optional)",
+      "lable4": "Betreff",
+      "lable5": "Nachricht",
+      "lable6": "Absenden",
+      "subtitle2": "Postanschrift",
+      "subtitle3": "Werkstatt",
+      "subtitle4": "Büro"
+    },
+  "seo": {
+    "home": {
+      "title": "e-gnition Hamburg e.V. – Formula Student Team",
+      "description": "Das Formula-Student-Team aus Hamburg: Wir entwickeln und bauen jedes Jahr einen Rennwagen und treten damit bei internationalen Wettbewerben an."
+    },
+    "formulastudent": {
+      "title": "Formula Student",
+      "description": "Was ist Formula Student? Der internationale Konstruktionswettbewerb für Studierende und die Rolle von e-gnition Hamburg darin."
+    },
+    "events": {
+      "title": "Events",
+      "description": "Unsere Veranstaltungen und Wettbewerbe: Hier findest du, wo du e-gnition Hamburg live erleben kannst."
+    },
+    "team": {
+      "title": "Unser Team",
+      "description": "Lerne das Team von e-gnition Hamburg kennen: Studierende aus allen Fachrichtungen, die gemeinsam einen Rennwagen entwickeln."
+    },
+    "teampage": {
+      "title": "Team {{year}}",
+      "description": "Das e-gnition-Hamburg-Team der Saison {{year}}: Mitglieder, Bereiche und Aufgaben."
+    },
+    "joinus": {
+      "title": "Dem Team beitreten",
+      "description": "Werde Teil von e-gnition Hamburg: So kannst du als Studierende oder Studierender im Formula-Student-Team mitarbeiten."
+    },
+    "aboutus": {
+      "title": "Über uns",
+      "description": "Wer wir sind: e-gnition Hamburg e.V. ist ein studentisches Formula-Student-Team aus Hamburg."
+    },
+    "mission": {
+      "title": "Mission e-gnition – Unterstützer werden",
+      "description": "Unterstütze e-gnition Hamburg als Sponsor oder Partner und hilf uns, unseren Rennwagen zu bauen."
+    },
+    "garage": {
+      "title": "Garage – unsere Rennwagen",
+      "description": "Alle Rennwagen von e-gnition Hamburg im Überblick, von den ersten Fahrzeugen bis zum aktuellen Modell."
+    },
+    "garagedetail": {
+      "title": "Rennwagen {{car}}",
+      "description": "Technische Daten, Bilder und Geschichte unseres Rennwagens {{car}}."
+    },
+    "supporters": {
+      "title": "Unterstützer",
+      "description": "Unsere Sponsoren, Partner und Förderer: Ohne sie wäre e-gnition Hamburg nicht möglich."
+    },
+    "seasons": {
+      "title": "Unterstützer nach Saison",
+      "description": "Alle Unterstützer von e-gnition Hamburg, aufgelistet nach Saison."
+    },
+    "alumni": {
+      "title": "Alumniverein und Förderverein",
+      "description": "Der Alumniverein und Förderverein von e-gnition Hamburg: ehemalige Mitglieder und Freunde des Teams."
+    },
+    "university": {
+      "title": "Hochschulpartner",
+      "description": "Unsere Hochschulpartner: die Universitäten und Hochschulen, die e-gnition Hamburg unterstützen."
+    },
+    "supportersdetail": {
+      "title": "Unterstützer Saison {{season}}",
+      "description": "Die Sponsoren und Partner von e-gnition Hamburg in der Saison {{season}}."
+    },
+    "news": {
+      "title": "News und Newsletter",
+      "description": "Neuigkeiten von e-gnition Hamburg und Anmeldung zu unserem Newsletter."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "So erreichst du e-gnition Hamburg: Kontaktdaten und Ansprechpartner des Teams."
+    },
+    "imprint": {
+      "title": "Impressum",
+      "description": "Impressum von e-gnition Hamburg e.V."
+    },
+    "dataprotection": {
+      "title": "Datenschutz",
+      "description": "Datenschutzerklärung von e-gnition Hamburg e.V.: Informationen zur Verarbeitung personenbezogener Daten."
+    }
+  }
+}

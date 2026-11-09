@@ -1,0 +1,82 @@
+<article class="car-detail">
+  <header class="car-hero">
+    <img
+      [src]="car.image"
+      [alt]="car.name"
+      class="car-hero__image"
+      loading="eager"
+      fetchpriority="high"
+      width="1200"
+      height="600"
+    />
+    <div class="car-hero__overlay">
+      <h1 class="car-hero__title">{{ car.name }}</h1>
+    </div>
+  </header>
+
+  <section class="car-section" aria-labelledby="season-heading">
+    <div class="car-section__inner">
+      <table class="car-details-table">
+        <caption class="visually-hidden">{{ 'garagedetail.season' | translate }} {{ 'garagedetail.events' | translate }}</caption>
+        <tbody>
+          <tr>
+            <th scope="row" id="season-heading">{{ 'garagedetail.season' | translate }}</th>
+            <td>{{ car.season }}</td>
+          </tr>
+          <tr *ngIf="car.events?.length">
+            <th scope="row">{{ 'garagedetail.events' | translate }}</th>
+            <td>
+              <ul class="info-list">
+                <li *ngFor="let event of car.events">{{ event }}</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <ng-container *ngIf="car.details?.length">
+    <mat-divider></mat-divider>
+
+    <section class="car-section" aria-labelledby="details-heading">
+      <div class="car-section__inner">
+        <h2 id="details-heading" class="section-title">{{ 'garagedetail.details' | translate }}</h2>
+        <table class="car-details-table car-details-table--specs">
+          <tbody>
+            <tr *ngFor="let detail of car.details">
+              <th scope="row">{{ detail.title }}</th>
+              <td>{{ detail.value }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="car.advancements?.length">
+    <mat-divider></mat-divider>
+
+    <section class="car-section" aria-labelledby="advancements-heading">
+      <div class="car-section__inner">
+        <h2 id="advancements-heading" class="section-title">{{ 'garagedetail.advancements' | translate }}</h2>
+        <ul class="info-list">
+          <li *ngFor="let advancement of car.advancements">{{ advancement }}</li>
+        </ul>
+      </div>
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="car.achievements?.length">
+    <mat-divider></mat-divider>
+
+    <section class="car-section" aria-labelledby="achievements-heading">
+      <div class="car-section__inner">
+        <h2 id="achievements-heading" class="section-title">{{ 'garagedetail.achievements' | translate }}</h2>
+        <ul class="info-list">
+          <li *ngFor="let achievement of car.achievements">{{ achievement }}</li>
+        </ul>
+      </div>
+    </section>
+  </ng-container>
+</article>

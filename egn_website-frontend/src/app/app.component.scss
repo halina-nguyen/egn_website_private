@@ -1,0 +1,443 @@
+mat-icon {
+  color: white;
+  font-family: Material Icons, serif !important;
+}
+
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 100%;
+  background-color: #02345F;
+  color: white;
+}
+
+.sidenav-toolbar {
+  background-color: transparent;
+  color: white;
+}
+
+.sidenav-link {
+  color: inherit;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Override mat-tree styling for dark background */
+.mat-tree {
+  background-color: transparent;
+}
+
+.mat-tree-node {
+  color: white;
+  min-height: 48px;
+}
+
+.mat-icon-button.mat-button-disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar-logo {
+  margin-right: 16px;
+  object-fit: scale-down;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.home-button:hover .toolbar-logo,
+.home-button:focus-visible .toolbar-logo {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 7px rgba(133, 196, 64, 0.85));
+}
+
+#toolbar {
+  background-color: #02345F;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.mat-sidenav-content {
+  padding-top: 64px;
+}
+
+.hamburger-menu {
+  display: none; /* Hidden on desktop by default */
+}
+
+@media (max-width: 650px) {
+  .hamburger-menu {
+    display: inline-flex; /* Show on mobile */
+  }
+}
+
+.home-button {
+  padding: 0 8px !important;  /* Reduziert den linken und rechten Innenabstand */
+  max-width: 140px;          /* Begrenzt die Breite des blauen Feldes (nach Wunsch anpassen) */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Falls das Logo dadurch skaliert oder verzerrt wird, stellen wir sicher, dass es unverändert bleibt: */
+.home-button .toolbar-logo {
+  height: 40px;
+  width: 160px;
+  max-width: 100%;           /* Passt sich dem schmaleren Feld an, falls nötig */
+  object-fit: scale-down;
+}
+
+//mobile -> is needed to center the home button on mobile
+@media (max-width:768px){
+  .header-button {
+    background-color: #02345F;
+    color: white !important;
+    margin: 0.1em 0.4em;
+    transition: background-color 0.2s ease;
+  }
+
+  @media (max-width: 768px) { /* denselben Breakpoint wie bei .hide-on-mobile verwenden */
+    .home-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      min-width: 0;
+    }
+  }
+}
+
+//desktop/tablet
+@media (min-width:769px){
+  .header-button {
+    background-color: #02345F;
+    color: white !important;
+    margin: 0.1em 0.4em;
+    transition: background-color 0.2s ease;
+  }
+}
+
+.header-button.active-route {
+  background-color: #85C440 !important;
+  font-weight: 600;
+}
+
+/* Language selector keeps the navy navigation treatment instead of the global CTA style. */
+.lang-btn {
+  background: #02345F !important;
+  background-color: #02345F !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  outline: 0;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  background: #012746 !important;
+  background-color: #012746 !important;
+}
+
+.lang-btn .language-flag {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.language-selector {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.15rem);
+  right: 0;
+  display: none;
+  min-width: 8.5rem;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem;
+  background: #02345F;
+  box-shadow: 0 0.25rem 0.7rem rgba(0, 0, 0, 0.24);
+  z-index: 1100;
+}
+
+.language-selector:hover .language-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-menu a {
+  color: #FFFFFF;
+  padding: 0.55rem 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.language-menu a:hover,
+.language-menu a:focus-visible {
+  background: #012746;
+}
+
+.language-menu a.active-lang {
+  font-weight: 600;
+}
+
+.footer {
+  background-color: #FFFFFF;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 1.5em;
+}
+
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.inline-footer {
+  position: static;
+  background-color: #02345F;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-main,
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.footer-legal {
+  margin-top: 0.45em;
+  padding-top: 0.45em;
+  padding-bottom: 0.45em;
+  font-size: 0.95em;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+@media (max-width: 650px) {
+  .footer {
+    padding: 0 0.5rem;
+  }
+
+  .footer-main {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    gap: 0.35rem;
+    padding: 0.3rem 0;
+  }
+
+  .footer-main .header-button {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    min-height: 2.35rem;
+    margin: 0;
+    padding: 0.45rem 0.15rem !important;
+    font-size: 0.64rem !important;
+    line-height: 1.2;
+    text-align: center;
+    justify-content: center;
+    white-space: pre-line !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .footer-logo {
+    max-width: 10rem;
+    height: auto;
+  }
+
+  .footer-legal {
+    margin-top: 0;
+    gap: 0.25rem 0.75rem;
+    justify-content: flex-end;
+    text-align: left;
+    line-height: 1.35;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .footer-legal .gray-link {
+    margin: 0;
+    padding: 0.25rem 0.15rem;
+    min-width: 0;
+  }
+}
+
+.gray-link {
+  color: #FFFFFF !important;
+  background-color: #02345F !important;
+  text-decoration: none;
+}
+
+.footer-copyright {
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  order: -1;
+  margin-right: auto;
+}
+
+.main-content {
+  background-color: #02345F;
+  display: flex; /* allow targeting last child for margin collapse fix */
+  flex-direction: column;
+}
+
+.footer-logo {
+  padding: 0.3em;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Top footer wrapper that holds shared sections (sponsors + find us) */
+.top-footer {
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 0; /* no vertical padding */
+}
+
+/* Optional: constrain inner sections if they don't already self-constrain */
+/* Constrain sponsors only; let Find Us manage its own width */
+.top-footer > app-mainsponsors {
+  width: 100%;
+  margin: 0 auto;
+}
+.top-footer > app-findus {
+  width: 100%;
+  margin: 0;
+}
+
+/* Remove trailing bottom margin from the last content block so sponsors butt up cleanly */
+.main-content > *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.sidenav-container .mat-drawer:not(.mat-drawer-opened) {
+  pointer-events: none;
+}
+
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+#toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding-right: 0;
+}
+
+@media (min-width: 769px) {
+  #toolbar {
+    position: fixed;
+    display: block;
+    padding: 0;
+    height: 64px;
+  }
+
+  #toolbar .toolbar-left {
+    position: absolute;
+    left: 0;
+    right: calc(50% + 5.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: flex-end;
+  }
+
+  #toolbar .home-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #toolbar .toolbar-right {
+    position: absolute;
+    left: calc(50% + 5.5rem);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .mat-sidenav-content {
+    padding-top: 56px;
+  }
+
+  #toolbar .toolbar-right {
+    min-width: 0;
+    justify-content: flex-end;
+    position: static;
+  }
+
+  #toolbar .toolbar-right .lang-btn {
+    margin: 0;
+  }
+
+  #toolbar .language-selector {
+    right: 0.75rem;
+  }
+}
+
+.toolbar-left,
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-left {
+  justify-content: flex-start;
+}
+
+.toolbar-right {
+  justify-content: flex-start;
+  margin-left: 0;
+  position: relative;
+}
+
+/* Hamburger bleibt ganz links, die Buttons rücken zum Logo */
+.toolbar-left .hamburger-menu {
+  margin-right: auto;
+}
+
+.toolbar-right nav {
+  display: flex;
+  align-items: center;
+  margin-right: 3.75rem;
+}

@@ -1,0 +1,21 @@
+<div class="header-image-container">
+  <img src="assets/garage_images/egn_garage_banner.webp" [alt]="'ui.garage_alt' | translate" class="header-image">
+  <span class="landingpage-copyright">&copy; Jan Lachmann</span>
+</div>
+
+<span class="subtitle">{{ 'garagelanding.subtitle' | translate }}</span>
+
+<div class="text">
+  <p [innerHTML]="'garagelanding.text' | translate"></p>
+</div>
+
+<span class="subtitle">{{ 'garagelanding.subtitle2' | translate }}</span>
+
+<div class="car-grid">
+  <div class="car-item" *ngFor="let car of cars" (click)="navigateTo('garage/' + car.name)">
+    <img [ngSrc]="car.image" [alt]="car.name" class="car-image" height="400" width="600" (click)="navigateTo('garage/' + car.name)">
+    <div class="car-name" (click)="navigateTo('garage/' + car.name)">{{ car.name }}</div>
+  </div>
+</div>
+
+

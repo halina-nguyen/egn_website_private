@@ -1,0 +1,33 @@
+<section class="landingpage-findus-inline" aria-labelledby="findus-heading">
+  <h2 id="findus-heading" class="findus-title">{{ 'ui.find_us_here' | translate }}</h2>
+  <div class="findus-content">
+    <div class="findus-left">
+      <address class="findus-address">
+        <strong>e-gnition Hamburg e.V.</strong><br>
+        TU Hamburg<br>
+        Denickestraße 17<br>
+        21073 Hamburg<br>
+        <a href="mailto:kontakt@egnition-hamburg.de">kontakt&#64;egnition-hamburg.de</a>
+      </address>
+      <div class="findus-social">
+        <button type="button" class="findus-icon" (click)="navigateTo('https://www.instagram.com/egnition_hamburg')" aria-label="Instagram">
+          <img src="assets/icons/instagram_icon.png" alt="Instagram">
+        </button>
+        <button type="button" class="findus-icon" (click)="navigateTo('https://www.linkedin.com/company/e-gnition-hamburg-e.v.')" aria-label="LinkedIn">
+          <img src="assets/icons/linkedin_icon.png" alt="LinkedIn">
+        </button>
+        <button type="button" class="findus-icon" (click)="navigateTo('https://www.youtube.com/@egnitionHamburg')" aria-label="YouTube">
+          <img src="assets/icons/youtube_icon.png" alt="YouTube">
+        </button>
+        <button type="button" class="findus-icon" (click)="navigateTo('https://www.tiktok.com/@egnition_hamburg')" aria-label="TikTok">
+          <img src="assets/icons/tiktok_icon.png" alt="TikTok">
+        </button>
+      </div>
+    </div>
+    <div class="findus-map-wrapper narrow">
+      <iframe title="Google Maps - e-gnition Hamburg (Am Schwarzenberg-Campus 4)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Am+Schwarzenberg-Campus+4,+21073+Hamburg&output=embed"
+        allowfullscreen aria-label="Map showing location at Am Schwarzenberg-Campus 4, 21073 Hamburg"></iframe>
+    </div>
+  </div>
+</section>

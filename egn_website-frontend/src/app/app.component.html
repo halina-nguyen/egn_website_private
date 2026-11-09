@@ -1,0 +1,118 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer mode="over" class="sidenav" [opened]="false">
+    <mat-toolbar class="sidenav-toolbar">
+      <button mat-icon-button (click)="drawer.toggle()" [attr.aria-label]="'ui.close_menu' | translate">
+        <mat-icon style="color: white">close</mat-icon>
+      </button>
+    </mat-toolbar>
+    <nav>
+      <mat-tree #tree [dataSource]="sidenavSource" [childrenAccessor]="childrenAccessor">
+        <!-- This is the tree node template for leaf nodes -->
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+          <!-- use a disabled button to provide padding for tree leaf -->
+          <button mat-icon-button disabled></button>
+          @if (node.lang) {
+            <a class="sidenav-link" [routerLink]="langUrl(node.lang)" [attr.hreflang]="node.lang"
+               (click)="drawer.close()">{{ node.name }}</a>
+          } @else {
+            <a class="sidenav-link" [routerLink]="node.link" (click)="drawer.close()">{{ node.name }}</a>
+          }
+        </mat-tree-node>
+        <!-- This is the tree node template for expandable nodes -->
+        <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle
+                       [cdkTreeNodeTypeaheadLabel]="node.name">
+          <button mat-icon-button matTreeNodeToggle
+                  [attr.aria-label]="'Toggle ' + node.name">
+            <mat-icon style="color: white" class="mat-icon-rtl-mirror">
+              {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+          <a class="sidenav-link" [routerLink]="node.link" (click)="drawer.close()">{{ node.name }}</a>
+        </mat-tree-node>
+      </mat-tree>
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar id="toolbar">
+      <nav class="toolbar-left">
+        <button mat-icon-button (click)="drawer.toggle()" class="hamburger-menu" [attr.aria-label]="'ui.open_menu' | translate">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <a class="header-button hide-on-mobile" mat-button [routerLink]="['/', currentLang, 'formulastudent']" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: false}">{{ 'nav.formulastudent' | translate }}</a>
+        <a class="header-button hide-on-mobile" mat-button [routerLink]="['/', currentLang, 'team']" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: false}">{{ 'nav.team' | translate }}</a>
+        <a class="header-button hide-on-mobile" mat-button [routerLink]="['/', currentLang, 'garage']" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: false}">{{ 'nav.garage' | translate }}</a>
+      </nav>
+
+      <a class="header-button home-button" mat-button [routerLink]="['/', currentLang, 'home']">
+        <img ngSrc="assets/logo.png" alt="e-gnition Hamburg e.V." class="toolbar-logo" height="40" width="160">
+      </a>
+
+      <div class="toolbar-right">
+        <nav>
+          <a class="header-button hide-on-mobile" mat-button [routerLink]="['/', currentLang, 'supporters']" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: false}">{{ 'nav.supporters' | translate }}</a>
+          <a class="header-button hide-on-mobile" mat-button [routerLink]="['/', currentLang, 'news']" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">{{ 'nav.news' | translate }}</a>
+          <a class="header-button hide-on-mobile" mat-button [routerLink]="['/', currentLang, 'aboutus']" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">{{ 'nav.aboutus' | translate }}</a>
+        </nav>
+
+        <div class="language-selector">
+          <button type="button" class="header-button lang-btn" aria-haspopup="menu">
+            <span class="language-flag" aria-hidden="true">{{ currentLang === 'de' ? '🇩🇪' : '🇬🇧' }}</span>
+            <span class="sr-only">{{ currentLang === 'de' ? 'Deutsch' : 'English' }}</span>
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+
+          <div class="language-menu" role="menu">
+            <a [routerLink]="langUrl('de')" hreflang="de" lang="de" role="menuitem" [class.active-lang]="currentLang === 'de'">
+              <span>🇩🇪</span>&nbsp; Deutsch
+            </a>
+            <a [routerLink]="langUrl('en')" hreflang="en" lang="en" role="menuitem" [class.active-lang]="currentLang === 'en'">
+              <span>🇬🇧</span>&nbsp; English
+            </a>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!-- Top footer area: shared across pages, appears above sticky footer, background-color:Fixing white line between footer and main content-->
+    <div class="top-footer" style="background-color: #02345F">
+      <app-mainsponsors></app-mainsponsors>
+      <app-findus></app-findus>
+    </div>
+
+    <!-- Footer content split: main (sticky) and legal (inline) -->
+    <ng-template #footerMainContent>
+      <div class="footer-main">
+        <a mat-button class="header-button" [routerLink]="['/', currentLang, 'news']">{{ 'ui.subscribe_newsletter' | translate }}</a>
+        <a mat-button class="header-button" [routerLink]="['/', currentLang, 'missionegnition']">{{ 'ui.become_supporter' | translate }}</a>
+        <a mat-button class="header-button" [routerLink]="['/', currentLang, 'joinus']">{{ 'ui.join_team' | translate }}</a>
+        <!-- <a mat-button class="header-button" [routerLink]="['/', currentLang, 'shop']">Our Shop</a> -->
+      </div>
+    </ng-template>
+
+    <!-- Footer content split: main (sticky) and legal (inline) -->
+    <ng-template #footerLegalContent>
+      <div class="footer-legal">
+        <a mat-button class="gray-link" [routerLink]="['/', currentLang, 'imprint']">{{ 'ui.imprint' | translate }}</a>
+        <a mat-button class="gray-link" [routerLink]="['/', currentLang, 'dataprotection']">{{ 'ui.data_protection' | translate }}</a>
+        <a mat-button class="gray-link" [routerLink]="['/', currentLang, 'contact']">{{ 'ui.contact' | translate }}</a>
+        <span class="footer-copyright">&copy; {{ currentYear }} e-gnition Hamburg e.V. {{ 'ui.all_rights_reserved' | translate }}</span>
+      </div>
+    </ng-template>
+
+    <!-- Legal footer row appears above the action buttons. -->
+    <div id="inline-footer" class="footer inline-footer">
+      <ng-container [ngTemplateOutlet]="footerLegalContent"></ng-container>
+    </div>
+
+    <!-- Action footer row appears below the legal links. -->
+    <div id="sticky-footer" class="footer sticky-footer">
+      <ng-container [ngTemplateOutlet]="footerMainContent"></ng-container>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

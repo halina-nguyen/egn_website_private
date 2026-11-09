@@ -1,0 +1,52 @@
+<div class="header-image-container">
+  <img src="assets/supporters_landing_images/EGN26_1000STROM.webp" alt="egn26 testing 2026" class="header-image">
+  <span class="header-copyright">&copy; Robert Oehlmann</span>
+</div>
+
+<span class="subtitle">{{ 'supporterslanding.subtitle' | translate }}</span>
+
+<div class="text">
+  <p [innerHTML]="'supporterslanding.text' | translate"></p>
+</div>
+
+<app-slideshow-content-section
+  title="{{ 'supporterslanding.sponsors.title' | translate }}"
+  theme="light"
+  imageAlign="left"
+  [images]="['assets/garage_images/egn_garage_banner.webp']"
+  (click)="navigateTo('supporters/seasons')"
+  style="cursor: pointer">
+  <div class="arrow-button">➜</div>
+</app-slideshow-content-section>
+
+<app-slideshow-content-section
+  title="{{ 'supporterslanding.supporters.title' | translate }}"
+  theme="dark"
+  imageAlign="right"
+  [images]="['assets/garage_images/egn_garage_banner.webp']"
+  (click)="navigateTo('supporters/alumniverein')"
+  style="cursor: pointer">
+  <div class="arrow-button">➜</div>
+</app-slideshow-content-section>
+
+<app-slideshow-content-section
+  title="{{ 'supporterslanding.universitypartner.title' | translate }}"
+  theme="light"
+  imageAlign="left"
+  [images]="['assets/garage_images/egn_garage_banner.webp']"
+  (click)="navigateTo('supporters/university')"
+  style="cursor: pointer">
+  <div class="arrow-button">➜</div>
+</app-slideshow-content-section>
+
+<app-slideshow-content-section
+  title="{{ 'supporterslanding.supportus.title' | translate }}"
+  theme="dark"
+  imageAlign="right"
+  [images]="['assets/garage_images/egn_garage_banner.webp']"
+  (click)="navigateTo('missionegnition')"
+  style="cursor: pointer">
+  <div class="arrow-button">➜</div>
+</app-slideshow-content-section>
+
+

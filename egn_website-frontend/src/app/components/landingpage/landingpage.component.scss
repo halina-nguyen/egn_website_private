@@ -1,0 +1,758 @@
+.landingpage-image {
+  width: auto;
+  height: 100%;
+  display: block;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 97.5%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 97.5%, rgba(0,0,0,0) 100%);
+}
+
+@media (max-width:768px){
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #111;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width:769px){
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background: #111;
+    border-radius: 14px;
+  }
+}
+
+// Bild + Text zusammen animieren
+.banner__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: slide 15s infinite;
+
+  &:nth-child(1) { animation-delay: 0s;  }
+  &:nth-child(2) { animation-delay: 5s;  }
+  &:nth-child(3) { animation-delay: 10s; }
+}
+
+@keyframes slide {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  28%  { opacity: 1; }
+  33%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+// Bild füllt den Slide
+.banner__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Overlay pro Slide
+.banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+// Text
+.banner__content {
+  position: absolute;
+  bottom: 48px;
+  left: 5%;
+  z-index: 2;
+  color: #fff;
+}
+
+@media (max-width:768px){
+  .banner__eyebrow {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .75;
+    margin-bottom: 8px;
+  }
+
+  .banner__title {
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(1.8rem, 7vw, 3.2rem);
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .landingpage-copyright {
+    color: #fff;
+    font-size: 0.5em;
+    font-family: "Open Sans", serif;
+    text-align: right;
+    padding: 1em;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+@media (min-width:769px){
+  .banner__eyebrow {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .75;
+    margin-bottom: 8px;
+  }
+
+  .banner__title {
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .landingpage-copyright {
+    color: #fff;
+    font-size: 1em;
+    font-family: "Open Sans", serif;
+    text-align: right;
+    padding: 1em;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+// ── Variablen ──────────────────────────────────────────────
+$navy:        #02345F;
+$white:       #ffffff;
+$white-60:    rgba(255, 255, 255, 0.6);
+$white-45:    rgba(255, 255, 255, 0.45);
+$white-10:    rgba(255, 255, 255, 0.10);
+$white-07:    rgba(255, 255, 255, 0.07);
+$white-06:    rgba(255, 255, 255, 0.06);
+$white-08:    rgba(255, 255, 255, 0.08);
+$white-15:    rgba(255, 255, 255, 0.15);
+$white-25:    rgba(255, 255, 255, 0.25);
+
+:host {
+  display: block;
+  background: $navy;
+  color: $white;
+  padding: 40px 32px 64px;
+}
+
+// ── Headline-Bereich ────────────────────────────────────────
+.lp-subtitle {
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $white-45;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.lp-headline {
+  text-align: center;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.lp-sep {
+  display: none;
+}
+
+// ── Karten-Grid ─────────────────────────────────────────────
+.lp-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lp-card {
+  position: relative;
+  border-radius: 14px;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.lp-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease;
+  border-radius: 14px;
+}
+
+.lp-card:hover .lp-card__inner {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
+// Vorder- und Rückseite liegen übereinander und wechseln sanft per Überblendung.
+.lp-card__front,
+.lp-card__back {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: none;
+}
+
+.lp-card__back {
+  display: none;
+}
+
+.lp-card__front {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lp-card:hover .lp-card__front {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lp-card__img {
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lp-card:hover .lp-card__img {
+  transform: scale(1.06);
+}
+
+.lp-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.10) 55%,
+    transparent 100%
+  );
+}
+
+.lp-card__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 16px;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: bottom 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.5s ease, background-color 0.5s ease;
+
+  h3 {
+    font-size: 20px !important;
+    font-weight: 600;
+    color: $white;
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-align: center;
+    transition: font-size 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s ease;
+  }
+
+  &--dark {
+    background: rgba(60, 60, 60, 0.85);
+  }
+}
+
+.lp-card:not(.lp-card--supporters):hover .lp-card__label {
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+  align-items: center;
+  padding: 24px;
+}
+
+.lp-card:not(.lp-card--supporters):hover .lp-card__label h3 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem) !important;
+}
+
+.lp-card--supporters .lp-card__label--dark {
+  background: var(--color-primary-dark);
+}
+
+// ── Rückseite: zeigt das Navigationsziel ──
+.lp-card__back {
+  background: rgba(2, 52, 95, 0.68);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid $white-15;
+
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: $white;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+}
+
+.lp-card:hover .lp-card__back {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-card__inner,
+  .lp-card__front,
+  .lp-card__back {
+    transition: none;
+  }
+}
+
+.lp-card__back-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $white-15;
+  border: 1px solid $white-25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: $white;
+  transition: transform 0.3s ease;
+}
+
+.lp-card:hover .lp-card__back-arrow {
+  transform: translateX(4px);
+}
+
+// bubble stayes on the front
+.lp-card--supporters .lp-card__front {
+  background: $white;
+}
+
+.lp-card__logos {
+  position: absolute;
+  inset: 0 0 52px 0; // Space for the lable
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+}
+
+.lp-card__logo {
+  height: 44px;
+  object-fit: contain;
+  flex: 1;
+  max-width: 80px;
+}
+// -- Sponsor lp card bubbles ----------------------------------
+  .sub {
+    color: #4b4f72;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  /* ── STAGE ── */
+  .stage {
+    position: relative;
+    width: min(900px, 100%);
+    height: 620px;
+  }
+
+  /* ── BUBBLE BASE ── */
+  .bubble {
+    position: absolute;
+    border-radius: 0;
+    overflow: visible;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    &:hover {
+      background: transparent;
+      transform: scale(1.05);
+    }
+  }
+  /* shine overlay */
+  .bubble::after {
+    display: none;
+  }
+  .bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+/* ── INDIVIDUAL BUBBLES: size + position + animation ──
+     Edit src="" in each .bubble to change the image.
+     Edit left/top/width/height to reposition & resize.   */
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%; // oder eine feste Höhe des Cards
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 0;
+  overflow: visible;
+  aspect-ratio: 1 / 1;
+  height: auto;       
+}
+
+// Nur width in % angeben — height ergibt sich automatisch
+.b1 { width: 22%; left: 4%;  top: 4%; z-index: 3; }
+.b2 { width: 18%; left: 26%; top: 2%; z-index: 2; }
+.b3 { width: 26%; left: 44%; top: 6%; z-index: 4; }
+.b4 { width: 15%; left: 74%; top: 3%; z-index: 2; }
+.b5 { width: 20%; left: 5%;  top: 42%;z-index: 3; }
+.b6 { width: 17%; left: 28%; top: 40%;z-index: 2; }
+.b7 { width: 24%; left: 45%; top: 46%;z-index: 5; }
+.b8 { width: 19%; left: 75%; top: 44%;z-index: 3; }
+// -- END ------------------------------------------------------
+
+// ── Sponsor logo marquee on the supporters card ─────────────
+.lp-card--supporters .stage {
+  position: absolute;
+  inset: 0 0 48px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background: $white;
+}
+
+.sponsor-marquee {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  overflow: hidden;
+}
+
+.sponsor-marquee__row {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sponsor-marquee__row:nth-child(2) .sponsor-marquee__track {
+  margin-left: 2.5rem;
+}
+
+.sponsor-marquee__row:nth-child(3) .sponsor-marquee__track {
+  margin-left: -2rem;
+}
+
+.sponsor-marquee__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: sponsor-marquee-right 180s linear infinite paused;
+  will-change: transform;
+}
+
+.lp-card--supporters:hover .sponsor-marquee__track {
+  animation-play-state: running;
+}
+
+.sponsor-marquee__logo {
+  width: 108px;
+  height: 54px;
+  flex: 0 0 108px;
+  margin: 0 14px;
+  object-fit: contain;
+}
+
+@keyframes sponsor-marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-marquee__track {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+// ── Team-Sektion ─────────────────────────────────────────────
+.lp-team {
+  background: $white-07;
+  border: 1px solid $white-08;
+  border-radius: 16px;
+  padding: 28px 28px 32px;
+}
+
+.lp-team__eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $white-45;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.lp-team__heading {
+  text-align: center;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: $white;
+  margin: 0 0 20px;
+}
+
+// ── Stats ────────────────────────────────────────────────────
+.lp-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lp-stat {
+  background: $white-07;
+  border: 1px solid $white-06;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lp-stat__num {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: $white;
+  line-height: 1;
+}
+
+.lp-stat__label {
+  font-size: 11px;
+  color: $white-45;
+  letter-spacing: 0.04em;
+}
+
+// ── Team-Text ─────────────────────────────────────────────────
+//mobile
+@media (max-width:768px){
+  .landingpage-text {
+    font-size: 1.2em;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 1.5;
+    padding-bottom: 3.5rem;
+  }
+}
+//desktop/tablet
+@media (min-width:768px){
+  .landingpage-text {
+    font-size: 1.2em;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    margin: 0 auto;
+    width: 60%;
+    line-height: 1.5;
+    padding-bottom: 3.5rem;
+  }
+}
+// ── Rollout 2026 Event Popup ────────────────────────────────────────────────
+.event-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  backdrop-filter: blur(3px);
+  animation: backdropIn .25s ease;
+}
+
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.event-popup {
+  position: relative;
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  width: 95vw;
+  max-width: 1100px;
+  max-height: 92vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  animation: popupIn .3s cubic-bezier(.22,.61,.36,1);
+}
+
+@keyframes popupIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.event-popup-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background .2s ease, transform .2s ease;
+
+  &:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.1);
+  }
+}
+
+.event-popup-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 420px;
+}
+
+.event-popup-left {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.event-popup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.event-popup-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 2.5rem 2rem 2rem 2rem;
+  background: #111827;
+  border-radius: 0 1rem 1rem 0;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  min-width: 280px;
+}
+
+.event-popup-desc {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  color: #fff;
+}
+
+.event-popup-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+
+  li { line-height: 1.5; }
+}
+
+.event-popup-register-btn {
+  display: block;
+  margin-top: 0.5rem;
+  background: #fff;
+  color: #02345F;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+  &:hover {
+    background: #02345F;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  }
+
+  &:active { transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .event-popup-inner {
+    grid-template-columns: 1fr;
+  }
+  .event-popup-left {
+    border-radius: 1rem 1rem 0 0;
+    max-height: 200px;
+  }
+  .event-popup-right {
+    border-radius: 0 0 1rem 1rem;
+    padding: 1.5rem 1.2rem;
+  }
+}

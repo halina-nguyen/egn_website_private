@@ -1,0 +1,209 @@
+:host {
+  display: block;
+  padding: 40px 32px 64px;
+}
+
+@media (max-width:768px){
+  .header-image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #111;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width:769px){
+.header-image-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #111;
+  border-radius: 14px;
+}
+}
+
+@media (max-width:768px){
+  .header-copyright {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    color: #fff;
+    font-size: 0.6em;
+    font-family: "Open Sans", serif;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.3em 0.7em;
+    border-radius: 0.3em;
+    display: block;
+    text-align: right;
+    pointer-events: none;
+  }
+}
+
+@media (min-width:769px){
+  .header-copyright {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    color: #fff;
+    font-size: 1em;
+    font-family: "Open Sans", serif;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.3em 0.7em;
+    border-radius: 0.3em;
+    display: block;
+    text-align: right;
+    pointer-events: none;
+  }
+}
+
+.header-image-container {
+  margin: 0; // <figure> hat Browser-Default-Margins
+}
+
+.header-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  margin: 0.75rem auto 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.cta-button {
+  /* Copy look from .end-button but adjust spacing for top section */
+  background-color: #85C440 !important;
+  color: #fff !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  padding: 1.1rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 200ms ease, transform 150ms ease, filter 200ms ease;
+}
+
+.cta-button:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  transform: translateY(-1px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+
+.previous-teams {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: max-height 320ms ease, opacity 220ms ease, transform 320ms ease;
+  pointer-events: none;
+  will-change: max-height, opacity, transform;
+}
+
+.previous-teams.open {
+  /* Mobile stacks all year cards vertically, so 2000px can cut the list off. */
+  max-height: 10000px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* .previous-teams.open can be used for future transitions if the content stays mounted */
+
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.year-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.year-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+.year-card-image {
+  display: block;
+  position: relative; // nötig für ngSrc "fill"
+  height: 150px;
+  overflow: hidden;
+}
+
+.year-card-image img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.year-card-label {
+  display: block;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(180deg, rgba(2, 52, 95, 0.9) 0%, rgba(2, 52, 95, 1) 100%);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  opacity: 0.9;
+  transition: opacity 200ms ease;
+}
+
+.year-card:hover .year-card-label {
+  opacity: 1;
+}
+.end-button {
+  background-color: #85C440;
+  margin: 5em auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.departments-intro {
+  margin-bottom: 2rem; // ersetzt die früheren <br><br> nach text2
+}

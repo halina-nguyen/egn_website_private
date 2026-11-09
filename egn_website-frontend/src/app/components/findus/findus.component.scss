@@ -1,0 +1,153 @@
+/* Find Us: match landing page style (dark background, white text, tighter map) */
+:host {
+  display: block;
+  background-color: #02345F;
+}
+
+.landingpage-findus-inline {
+  width: 50%;
+  max-width: 1400px;
+  margin: 0 auto; /* remove bottom margin to avoid extra gap under top-footer */
+  padding: 2rem; /* internal breathing room */
+  box-sizing: border-box;
+}
+
+.findus-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0.5rem 0 1.2rem 0;
+  text-align: center;
+}
+
+.findus-content {
+  display: grid;
+  grid-template-columns: clamp(240px, 24%, 320px) 1fr;
+  gap: 2rem 3rem;
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.findus-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.findus-social {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.findus-icon {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-height: 0 !important;
+  padding: 0 !important;
+  transition: background .25s ease, transform .25s ease, border-color .25s ease;
+  padding: 0;
+}
+
+button.findus-icon:not([mat-icon-button]):not(.mat-icon-button):not(.close-button):not(.lang-btn) {
+  background: transparent !important;
+  border-radius: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+button.findus-icon:not([mat-icon-button]):not(.mat-icon-button):not(.close-button):not(.lang-btn):hover,
+button.findus-icon:not([mat-icon-button]):not(.mat-icon-button):not(.close-button):not(.lang-btn):focus-visible {
+  background: transparent !important;
+}
+.findus-icon img {
+  max-width: 25px;
+  max-height: 25px;
+  display: block;
+  filter: brightness(0) invert(1);
+  transition: filter 180ms ease, transform 180ms ease;
+}
+.findus-icon:hover, .findus-icon:focus-visible { background: transparent !important; transform: translateY(-3px); }
+.findus-icon:active { transform: translateY(-1px); }
+.findus-icon:hover img,
+.findus-icon:focus-visible img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(64%) saturate(600%) hue-rotate(42deg) brightness(94%) contrast(90%) drop-shadow(0 0 5px rgba(133, 196, 64, 0.95));
+  transform: scale(1.08);
+}
+
+.findus-address {
+  font-style: normal;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  text-align: left;
+  max-width: 260px;
+  margin: 0;
+}
+.findus-address a { color: #fff; text-decoration: underline; }
+.findus-address a:hover { text-decoration: none; }
+
+.findus-map-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px -2px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(3px);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.findus-map-wrapper:hover,
+.findus-map-wrapper:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -4px rgba(0,0,0,0.5);
+}
+.findus-map-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 420ms cubic-bezier(.22,.61,.36,1);
+}
+.findus-map-wrapper:hover iframe,
+.findus-map-wrapper:focus-within iframe {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  .landingpage-findus-inline { width: 55%; }
+}
+@media (max-width: 900px) {
+  .landingpage-findus-inline { width: 70%; }
+}
+@media (max-width: 700px) {
+  .landingpage-findus-inline { width: 90%; }
+}
+@media (max-width: 520px) {
+  .landingpage-findus-inline { width: 100%; padding: 0 1rem; }
+}
+
+@media (max-width: 800px) {
+  .findus-title { font-size: 1.5rem; }
+  .findus-map-wrapper { min-height: 200px; }
+  .findus-content { grid-template-columns: 1fr; }
+  .findus-social { justify-content: flex-start; }
+  .landingpage-findus-inline { padding-bottom: 2rem; }
+}

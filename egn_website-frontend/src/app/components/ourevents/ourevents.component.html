@@ -1,0 +1,29 @@
+<div class="fs-image-container">
+  <img ngSrc="assets/images/fsg_bigpic.jpg" alt="Formula Student Germany" class="fs-image" height="1108" width="1440">
+  <span class="fs-copyright">&copy; FSG Maru</span>
+</div>
+
+<span class="fs-subtitle">{{ 'ourevents.fs-subtitle' | translate }}</span>
+
+<div class="fs-text">
+  <p [innerHTML]="'ourevents.fs-text' | translate"></p>
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let event of events; let i = index"
+                       class="event-panel"
+                       [ngClass]="{ 'event-panel-white': i % 2 === 0, 'event-panel-blue': i % 2 !== 0 }">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <img src="{{event.logo}}" class="event-icon" alt="{{event.title}}"/>
+      </mat-panel-title>
+      <mat-panel-description class="event-title" [ngClass]="{ 'event-title-blue': i % 2 === 0, 'event-title-white': i % 2 !== 0 }">
+        {{ event.title }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p [ngClass]="{ 'event-title-blue': i % 2 === 0, 'event-title-white': i % 2 !== 0 }" style="white-space: pre-line">{{ event.description }}</p>
+    <!--img *ngIf="event.image" [src]="event.image" alt="{{ event.title }}" class="event-image" /-->
+  </mat-expansion-panel>
+</mat-accordion>
+
+

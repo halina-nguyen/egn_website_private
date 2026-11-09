@@ -1,0 +1,39 @@
+<div class="header-image-container">
+  <img src="assets/images/fsg_bigpic.jpg" alt="Formula Student Germany" class="fs-image" height="1108" width="1440">
+  <span class="fs-copyright">&copy; FSG Maru</span>
+</div>
+
+<span class="subtitle">{{ 'formulastudent.subtitle' | translate }}</span>
+
+<div class="text">
+  <p [innerHTML]="'formulastudent.text' | translate"></p>
+</div>
+
+<app-slideshow-content-section
+  [title]="'ui.electric_dynamics_title' | translate"
+  theme="light"
+  imageAlign="left"
+  [images]="['assets/images/fs_dyn.png']">
+  <p>{{ 'formulastudent.electric_dynamics' | translate }}</p>
+</app-slideshow-content-section>
+
+<app-slideshow-content-section
+  [title]="'ui.statics_title' | translate"
+  theme="dark"
+  imageAlign="right"
+  [images]="['assets/images/fs_statics.png']">
+  <p>{{ 'formulastudent.statics' | translate }}</p>
+</app-slideshow-content-section>
+
+<app-slideshow-content-section
+  [title]="'ui.driverless_title' | translate"
+  theme="light"
+  imageAlign="left"
+  [images]="['assets/images/fs_dv.png']">
+  <p>{{ 'formulastudent.driverless' | translate }}</p>
+</app-slideshow-content-section>
+
+<button mat-flat-button class="fs-button" (click)="navigateTo('events')">{{ 'ui.event_participations' | translate }}</button>
+
+
+

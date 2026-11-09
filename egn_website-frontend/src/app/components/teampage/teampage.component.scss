@@ -1,0 +1,178 @@
+/* Department selection */
+.department-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center; /* centers the department Navigation in the center of the screen */
+  gap:12px;
+  padding:12px;
+  max-width:100%;
+}
+
+.department-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#85C440;
+  color:white !important;
+  text-decoration:none;
+
+  font-size:1.1rem;
+  font-weight:600;
+
+  padding:14px 22px;
+  min-height:48px;
+  min-width:120px;
+
+  border-radius:12px;
+
+  transition:
+    background-color .2s ease,
+    transform .15s ease;
+}
+
+.year-nav {
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #85C440;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform:scale(1.03);
+}
+
+.department-nav a:hover,
+.department-nav a:active{
+  transform:scale(1.03);
+}
+
+.divider {
+  width: 25%;
+  margin: 20px auto;
+  border: none;
+  border-top: 2px solid #ffffff;
+}
+
+/* mobile: bigger nav-buttons + horizontal scroll */
+@media (max-width:768px){
+  .department-nav{
+    justify-content:flex-start; /* scroll navigation starts on the left */
+    gap:14px;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding:12px;
+  }
+
+  .department-nav a{
+    font-size:1.15rem;
+    padding:16px 24px;
+    min-height:52px;
+    min-width:140px;
+    flex-shrink:0;
+  }
+}
+/* Mobile + Standard */
+
+  .image-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* always 2 columns */
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    margin: auto;
+    list-style: none;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .image-item{
+    text-align: center;
+    width: 100%;
+    max-width: none;
+    list-style: none;
+  }
+
+  .image-item figure{
+    margin: 0;
+  }
+
+  .image-item figcaption {
+    padding-top: 1rem;
+  }
+
+  .image-item img{
+    width:100%;
+    height:auto; /* sonst überschreibt das height-Attribut (NgOptimizedImage) das aspect-ratio */
+    aspect-ratio:10/16;
+    object-fit:cover;
+    display:block;
+    border-radius: 20px;
+  }
+
+  .member_title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin: 0 0 0.15rem;
+  }
+
+  .member_info {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 100;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h1 {
+    font-size: 4.5em;
+    font-weight: bold;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin: 0.2em auto;
+    text-align: center;
+  }
+
+/* ------------------------------------------------------------- */
+/* Desktop */
+@media (min-width:768px) {
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* zentriert auch unvollständige letzte Reihen */
+    gap: 16px;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .image-item {
+    /* 4 pro Reihe: (100% - 3 Lücken) / 4 */
+    flex: 0 0 calc((100% - 3 * 16px) / 4);
+    width: auto;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+}

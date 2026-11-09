@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  min-height: 100%;
+  padding-bottom: 2rem;
+  background: #02345f;
+  color: #111111;
+}
+
+.header-image-container {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.header-image {
+  display: block;
+  width: min(220px, 60vw);
+  height: auto;
+  margin: 0 auto;
+}
+
+.subtitle {
+  display: block;
+  margin: 1.5rem auto 2rem;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.legal-text {
+  width: min(92%, 60rem);
+  margin: 0 auto 3rem;
+  padding: 2rem clamp(1.25rem, 4vw, 3rem);
+  box-sizing: border-box;
+  color: #111111;
+  background: #ffffff !important;
+  background-image: none;
+  border: 1px solid rgba(2, 52, 95, 0.14);
+  border-radius: 0.75rem;
+  line-height: 1.7;
+}
+
+.legal-text .heading {
+  display: block;
+  margin-top: 2rem;
+  color: #111111;
+  font-weight: 700;
+}
+
+.legal-text .heading:first-child {
+  margin-top: 0;
+}
+
+.legal-text .heading--large {
+  font-size: 1.25rem;
+}
+
+.legal-text .heading--medium {
+  font-size: 1.05rem;
+}
+
+.legal-text p {
+  margin: 0.55rem 0 0;
+  font-size: 1rem;
+}
+
+.legal-text a {
+  color: #38c2d2;
+  overflow-wrap: anywhere;
+}

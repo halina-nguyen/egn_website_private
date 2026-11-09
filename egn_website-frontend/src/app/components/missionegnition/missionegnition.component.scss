@@ -1,0 +1,15 @@
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .mdc-label {
+  color: #fff;
+}

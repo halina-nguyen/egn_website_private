@@ -1,0 +1,300 @@
+{
+  "ui": {
+    "close_menu": "Close menu",
+    "open_menu": "Open menu",
+    "subscribe_newsletter": "Subscribe to our\nnewsletter",
+    "become_supporter": "Become a\nsupporter",
+    "join_team": "Join our\nteam",
+    "all_rights_reserved": "All rights reserved.",
+    "imprint": "Imprint",
+    "data_protection": "Data protection",
+    "contact": "Contact",
+    "find_us_here": "Find us here",
+    "our_university": "Our university",
+    "rollout_description": "Join us as we reveal the egn26, our new Formula Student race car for this season!",
+    "entry_from": "Entry from 6:00 PM",
+    "register_here": "Register here →",
+    "event_participations": "Our event participations",
+    "supporters_of_season": "Supporters of the {{season}} season",
+    "previous_image": "Previous image",
+    "next_image": "Next image",
+    "royal_first_class_partner": "Royal First Class Partner",
+    "newsletter_heading": "Subscribe to our newsletter",
+    "email_address": "Email address",
+    "electric_dynamics_title": "Electric dynamics",
+    "statics_title": "Statics",
+    "driverless_title": "Driverless",
+    "garage_alt": "The e-gnition garage",
+    "no_information": "No information available",
+    "visit_website": "Visit website",
+    "application_form_today": "Fill out our application form today"
+  },
+  "mainsponsor":{
+    "contact": "Interested in a partnership?",
+    "contact_button": "Get in touch",
+    "more_partners": "More partners",
+    "royal_partner": "Royal First Class Partner",
+    "university_partner": "University Partner"
+  },
+  "landingpage": {
+    "banner_5973": {
+      "title": "Our team",
+      "text": "Passion meets technology"
+      },
+    "banner_7550": {
+      "title": "Formula Student",
+      "text": "Ready for the competition"
+    },
+    "lp-headline": "Discover passion for motorsport",
+    "subtitle": "Formula Student team of TU Hamburg",
+    "lp-team__eyebrow": "About us",
+    "lp-stat__label_1": "Students",
+    "lp-stat__label_2": "Years active",
+    "lp-stat__label_3": "Founded",
+    "teamTitle": "Our Team",
+    "teamText": "We, the members of e-gnition, have been developing a new electric and autonomous racing car every year since 2011 to compete in international Formula Student competitions.<br><br>Our team currently consists of around 70 students from the Technical University of Hamburg and surrounding colleges and universities. Every year, we start afresh and develop a new racing car concept so that we can actively participate in Formula Student racing events in the coming season.<br><br>Over the past 15 years, we have successfully achieved innovations and progress. Yet every year, we take on the challenge anew to reach new heights and set new records!",
+    "links": {
+      "joinUs": "Join Us",
+      "ourTeam": "Our Team",
+      "supporters": "Supporters"
+    }
+  },
+  "formulastudent":{
+    "subtitle": "Formula Student",
+    "text":"<strong>Formula Student is the world’s largest engineering competition. </strong><br>Every year, up to 600 teams from universities around the world take part in this competition. Formula Student events are held all over the world, attracting many interested students, companies and motorsport fans to almost all major race tracks. What makes this competition special is that the focus is not only on the races (dynamic disciplines), but also on other engineering skills (static disciplines). The aim of Formula Student is to give students the opportunity to apply the knowledge they have learnt at university in a practical setting. It also offers an opportunity to familiarise oneself with important aspects of future working life, such as project management, teamwork and a closer understanding of economic decisions during the design process.<br><br><strong>e-gnition, a Hamburg-based team based at the Technical University, has been participating in this competition since 2012. </strong> <br>We offer interested students the opportunity almost every year to experience the entire design and construction of the racing car for themselves. What also makes e-gnition special is the fact that the racing cars have always been electrically powered since the start of the first season. Furthermore, e-gnition has also been competing in this discipline since the first Driverless Competition in Formula Student Germany.<br>",
+    "electric_dynamics":"We compete in various dynamic disciplines to test the performance and handling of our race car and measure up against other teams.",
+    "statics": "We are presenting the design of our racing car to a panel of experts to demonstrate that our vehicle is not only fast, but also safe and well-engineered.",
+    "driverless": "We are developing software to enable our racing car to drive autonomously."
+  },
+  "nav": {
+    "formulastudent": "Formula Student",
+    "team": "Team",
+    "garage": "Garage",
+    "supporters": "Supporters",
+    "news": "News",
+    "aboutus": "About Us"
+  },
+  "teampage": {
+    "member_alt": "Portrait of {{name}}, {{job}}, e-gnition Hamburg e.V. {{year}}",
+    "contact": "Contact",
+    "contact_aria": "Email {{name}}",
+    "all_teams": "All teams",
+    "other_years": "Other teams"
+  },
+  "teamlanding": {
+    "header_alt": "The e-gnition Hamburg team celebrating the win at Formula Student Germany 2026",
+    "team_alt": "Team photo e-gnition Hamburg {{year}}",
+    "subtitle": "One car. One team.",
+    "current_team": "Current team",
+    "previous_teams": "Previous teams",
+    "join_us": "Join us",
+    "text": "<p><strong>e-gnition Hamburg is the Formula Student team at Hamburg University of Technology – and much more than that:</strong> <br> Since our foundation in 2011, we have been developing an electric racing car every year with over 70 dedicated students. Since 2018, we have also been building an autonomous vehicle. Our goal: to bring innovation to the track – at the international Formula Student competitions.<br><br><strong>Interdisciplinarity and cross-university collaboration</strong><br>We work in an interdisciplinary and cross-university manner: our team members come from a wide variety of disciplines – from engineering and computer science to design, business administration and communication. In addition to TU Hamburg, students from other universities in Hamburg, Bremen and Schleswig-Holstein are also part of our team.<br><br><strong>What unites us? A passion for technology, precision and teamwork. </strong><br>At e-gnition, high-tech and project management meet genuine racing spirit. Together, we tackle challenges in:<br></p><ul><li>Electrical engineering – from drive systems and power electronics to safety systems</li><li>Software development – particularly in the fields of autonomous driving and control engineering</li><li>Mechanical engineering & design – chassis, suspension, aerodynamics and manufacturing</li><li>Management & communication – sponsorship, event planning, social media and team organisation</li></ul><p>A passion for technology, team spirit and the courage to try something new – with electric and autonomous racing cars, we are actively shaping the mobility of tomorrow as a team.</p>",
+    "subtitle2": "Our departments",
+    "text2": "Here is a brief overview of our departments and a summary of their main responsibilities. All our departments work closely together in an interdisciplinary manner. Do you have any questions? Get in touch!",
+    "chassis": "Design and manufacture of the monocoque",
+    "chassis2": "Safety concepts and ergonomics",
+    "chassis3": "Material selection, testing and analysis",
+    "performance": "Design and manufacture of chassis, steering and braking systems",
+    "performance2": "Simulation of vehicle dynamics",
+    "performance3": "Design and analysis of transmission, wheel carriers and FDS",
+    "aerodynamics": "Design and manufacture of the aerodynamics package",
+    "aerodynamics2": "CFD simulations and other simulations to validate the relevant target values",
+    "aerodynamics3": "Wind tunnel and vehicle testing",
+    "electronics": "Design and manufacture of the battery",
+    "electronics2": "Planning, assembly and testing of PCBs",
+    "electronics3": "Wiring harness construction and installation",
+    "embedded": "Development of custom circuit boards",
+    "embedded2": "Programming of control elements (torque vectoring)",
+    "embedded3": "Development and installation of sensor systems and telemetry",
+    "driverless": "Integration of sensor systems (lidar and radar)",
+    "driverless2": "Path planning",
+    "driverless3": "Object detection, SLAM",
+    "operations": "Social media management",
+    "operations2": "Event planning and execution",
+    "operations3": "Sponsorship management"
+   },
+   "garagelanding": {
+    "subtitle": "Progress every season",
+    "text": "Since 2011, we have been designing and building a new electric racing car every year. Each season, we set ourselves the goal of achieving new milestones with the car. Here is an overview of all the vehicles in the club’s history.<br><br>Individual racing cars have achieved significant technical milestones that have greatly advanced our development.<br>Particularly interesting racing cars from a technical perspective are:<br><ul><li>the egn12, our very first vehicle</li><li>the egn15, featuring the first monocoque and aerodynamic package</li><li>the egn17ev, the first all-wheel-drive vehicle, and the egn17dv, the first autonomous car</li><li>the egn20/egn21, the first car to combine the autonomous driving system and the driver in the same vehicle</li><li>the egn24, which uses a new LiDAR sensor setup</li></ul>You can find out more about each individual car here.",
+    "subtitle2": "Our cars"
+   },
+  "garagedetail":{
+    "season": "Season",
+    "events": "Events Attended",
+    "details": "Technical Details",
+    "advancements": "Major Advancements",
+    "achievements": "Achievements"
+   },
+    "supporterslanding": {
+      "subtitle": "Strong partnerships – a strong team",
+      "text": "As well as an ambitious team, building a new racing car each year also requires strong partnerships and supporters. In particular, the Hamburg University of Technology and its affiliated institutes are very close to us, as they are home to our workshop and our activities. However, our sponsors also play a significant role in bringing our project to fruition. <br>We also benefit from the organised network of former members within the alumni association.<br>As a non-profit association, our team relies on donations, which can be made to us by individuals, companies or other institutions.<br><br>We are very grateful for the many forms of support we receive and look forward to our close partnerships and collaborations! <br><br>Find out more here about our supporters and how you can become one yourself:",
+      "sponsors":{
+        "title": "Get to know our sponsors and supporters!"
+      },
+      "supporters":{
+        "title": "Friends and supporters of e-gnition Hamburg e.V."
+      },
+      "universitypartner":{
+        "title": "University partners"
+      },
+      "supportus":{
+        "title": "Discover more ways to support us"
+      }
+   },
+    "news": {
+      "subtitle": "#1000Strom straight to your inbox – newsletter",
+      "text":"Experience #1000Strom throughout the season: from the initial concept through to production and the rollout – the official launch of our new racing car, the egns. After that, it’s full throttle and time to experience spine-tingling moments on Europe’s race tracks.<br><br>With our newsletter, you’ll get the full #1000Strom experience – exclusive insights, team stories and updates delivered straight to your inbox whenever things are heating up at e-gnition."
+   },
+    "aboutus": {
+      "subtitle": "About Us",
+      "text": "e-gnition Hamburg e.V. is the Formula Student team at Hamburg University of Technology. Since its foundation in 2011, the team has set itself the goal of participating annually in the international Formula Student competitions with an electrically powered and, since 2017, autonomous racing car. <br><br>The team consists of around 70 students from the Hamburg University of Technology and surrounding universities and colleges. The team structure is organised in such a way that, for the most part, active students take on the management and planning of the project on their own initiative and implement it. <br><br>Every year, both the standards that e-gnition Hamburg sets for itself and those stipulated by the Formula Student regulations become more demanding. With ambition and dedication, a new generation takes on these challenges each year and proudly presents the results of their hard work with the current season’s car.<br><br>"
+   },
+    "ourevents":{
+      "fs-subtitle": "On Europe's racetracks since 2012",
+      "fs-text": "In our very first season, our team made it to its first international competitions in Europe with the egn12. Since then, we have taken part in Formula Student competitions every year and have competed in a total of eight different events. <br><br>Find out more about our event participation here:"
+   },
+  "joinus": {
+    "joinus-title": "Join us",
+    "joinus-subtitle": "Become part of our team",
+    "joinus-text": "We’re always looking to grow and are therefore always delighted to welcome motivated new members to the team! <br>Are you interested in gaining practical experience in a motorsport club and would like to find out more? Then you’ve come to the right place!",
+    "joinus-button--top": "Go directly to the application form",
+
+    "subtitle": "What we offer",
+    "text": "<ul><li>You’ll quickly get to grips with the project and learn the basics and details of design, planning and manufacturing</li><li>You can contribute your own ideas and help drive the project forward</li><li>You’ll learn about modern manufacturing processes and technologies</li><li>You’ll have the chance to experience Formula Student events as a team member at racetracks across Europe</li><li>You’ll be part of a helpful, committed and friendly team</li><li>You’ll get an insight into all areas of our work and develop within the team</li><li>You’ll build contacts with great companies that support us</li></ul>",
+
+    "subtitle2": "What should you bring to the role?",
+    "text2": "<ul><li>Motivation to work on a large-scale project</li><li>Good knowledge of German or English</li><li>Ability to work on projects in a structured and independent manner</li><li>Willingness to invest time to meet deadlines</li><li>Nice to have, but not essential:</li><ul><li>Interest in the automotive industry or motor racing</li><li>Enthusiasm for new technologies</li><li>Experience with specific manufacturing technologies, materials, etc.</li></ul></ul>",
+
+    "text3": "As a general rule, everyone is welcome here! We’ll teach you what you don’t yet know and carefully train you in your field, even if you have no prior experience.<br>However, we recommend that you don’t join us straight away as a first-year student, as your focus should still be on starting your studies. But if Formula Student is YOUR calling, please feel free to get in touch with us.<br><br>At the moment, we are particularly looking for support in the following departments and areas. However, you are still welcome to apply for all other areas – we look forward to hearing from you!",
+
+    "text4": "<ul><li>Operations</li><ul><li>Photography and videography</li><li>Finance and sponsorship</li><li>Event planning/team building</li><li>Graphic design</li></ul><li>Electronics</li><ul><li>PCB design and assembly</li><li>Battery design and construction</li><li>Test bench planning and execution</li></ul><li>Embedded</li><ul><li>Software programming</li></ul></ul>"
+  },
+  "missionegnition": {
+    "subtitle": "Mission e-gnition",
+    "mission": "With Mission e-gnition, you too can become a supporter of our project!<br>With a donation of 25 euros or more, you can sponsor a cell and have your name immortalised on our battery box with your signature. <br>This means you'll be part of our events too – at the heart of our car!<br><br>Please fill in the form below.<br><br>Thank you very much for your interest and support!",
+    "mat-lable": "How much would you like to donate?",
+    "mat-lable2": "First name",
+    "mat-lable3": "Surname",
+    "radio-button": "I do not require a donation receipt",
+    "radio-button2": "I require a donation receipt to be sent to the following address:",
+    "mat-lable4": "Street and house number",
+    "mat-lable5": "Postcode",
+    "mat-lable6": "Town",
+    "mat-lable7": "Comments",
+    "button": "Become a supporter [1]",
+    "text": "Donate via bank transfer: <br>Account holder: e-gnition Hamburg e.V.<br>IBAN: DE19 2005 0550 1274 1289 31<br>Reference: Donation Battery Sponsor - Name<br>",
+    "text2": "You can also support us passively and at no extra cost through your online purchases. <br>You can find more information here: <a href=\"https://www.gooding.de/e-gnition-hamburg-e-v-8762\">https://www.gooding.de/e-gnition-hamburg-e-v-8762</a>"
+  },
+  "supportersseasons":{
+      "subtitle": "Strong partnerships – a strong team",
+      "text": "Our club thrives on the many partnerships that are formed through sponsorship and donations. We are grateful to be able to maintain and nurture over 120 strong partnerships with large corporations, small and medium-sized enterprises, manufacturers and service providers every year. <br><br>Get to know the supporters of our respective seasons here!<br><br>Are you interested in supporting our team with your business? Then please feel free to contact us via the <a href='/contact'>contact form</a>."
+   },
+   "alumniverein":{
+      "subtitle": "Who are we?",
+      "text": "The support association was founded at the end of the second Formula Student season of the main association, “e-gnition Hamburg e.V.”, in the summer of 2013 by a small group of former team members. Since November 2015, as the name ‘Friends and Supporters of e-gnition Hamburg e.V.’ suggests, all alumni, supporters and companies have been able to join the support association.",
+      "subtitle2": "Collaboration with the active team",
+      "text2": "As a support association, we aim to create a sustainable and successful future by maintaining and continuously developing the team, in coordination with the board of the active racing team. We are committed to providing both moral and financial support to our team. To this end, we maintain close contact with the active team. <br>Regular discussions take place regarding old and new concept ideas. We also support the team with event preparations, e.g. through advisory pre-scrutineering or by attending test days, including providing refreshments for all the hard-working testers. Where possible, the Friends’ Association also provides financial support to the team from its available funds and through its members. <br>A special part of this support is the annual battery sponsorships, which are jointly arranged by our members at the rollout of the new car. Furthermore, the alumni association offers contacts in research and industry, thereby providing access to interesting topics for potential internships or final-year projects for active team members. <br>",
+      "subtitle3": "What else do we do?",
+      "text3": "At some point, university life comes to an end, and with it, at the latest, time spent as an active team member. In addition to supporting the main association, we also aim to foster networking among former and current team members, sponsors and fans. In addition to the annual general meeting, members of the Friends and Supporters Association meet for joint events such as:<br><ul><li>Rollout</li><li>Barbecue on a test day</li><li>Poker evenings</li><li>Go-karting</li><li>Supporting the team at Formula Student events on site</li></ul>",
+      "subtitle4": "The forms for joining the Association of Friends and Supporters of e-gnition Hamburg e.V.",
+      "button": "Membership documents",
+      "button2": "Membership fee regulations",
+      "button3": "Association statutes",
+      "subtitle5": "Contact"
+    },
+    "universitypartners":{
+      "subtitle": "Our university as a foundation",
+      "text": "The Hamburg University of Technology (TUHH) provides the premises that are essential to the association’s existence. <br>We are delighted to receive active support not only from the university itself, but also from the individual institutes, which provide us with significant assistance in manufacturing and are always available to answer any questions.<br><br>We are therefore in constant dialogue with the TUHH – and benefit from one another: not only does the TUHH provide us with the foundations and support for our activities, but we also contribute to engineering education at the university. By deepening technical knowledge through practical experience and project responsibility for components within the framework of our project, as well as bringing interdisciplinary work closer to the students, we complement the academic offering at the TUHH with a goal-oriented project.<br><br>Find out more about the TUHH and the supporting institutions here:"
+    },
+    "contact": {
+      "subtitle": "Contact",
+      "text": "Do you have any questions? Please feel free to use the contact form or send us an email at:",
+      "lable": "Name",
+      "lable2": "Email",
+      "lable3": "Phone (optional)",
+      "lable4": "Subject",
+      "lable5": "Message",
+      "lable6": "send",
+      "subtitle2": "Postal address",
+      "subtitle3": "Workshop",
+      "subtitle4": "Office"
+    },
+  "seo": {
+    "home": {
+      "title": "e-gnition Hamburg e.V. – Formula Student Team",
+      "description": "The Formula Student team from Hamburg: every year we design and build a race car and compete with it in international competitions."
+    },
+    "formulastudent": {
+      "title": "Formula Student",
+      "description": "What is Formula Student? The international engineering competition for students and the role of e-gnition Hamburg in it."
+    },
+    "events": {
+      "title": "Events",
+      "description": "Our events and competitions: find out where you can see e-gnition Hamburg live."
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Meet the e-gnition Hamburg team: students from all fields of study who develop a race car together."
+    },
+    "teampage": {
+      "title": "Team {{year}}",
+      "description": "The e-gnition Hamburg team of the {{year}} season: members, departments and responsibilities."
+    },
+    "joinus": {
+      "title": "Join the Team",
+      "description": "Become part of e-gnition Hamburg: how students can join our Formula Student team."
+    },
+    "aboutus": {
+      "title": "About Us",
+      "description": "Who we are: e-gnition Hamburg e.V. is a student Formula Student team from Hamburg."
+    },
+    "mission": {
+      "title": "Mission e-gnition – Become a Supporter",
+      "description": "Support e-gnition Hamburg as a sponsor or partner and help us build our race car."
+    },
+    "garage": {
+      "title": "Garage – Our Race Cars",
+      "description": "All e-gnition Hamburg race cars at a glance, from the first vehicles to the current model."
+    },
+    "garagedetail": {
+      "title": "Race Car {{car}}",
+      "description": "Technical data, pictures and history of our race car {{car}}."
+    },
+    "supporters": {
+      "title": "Supporters and Partners",
+      "description": "Our sponsors, partners and patrons: e-gnition Hamburg would not be possible without them."
+    },
+    "seasons": {
+      "title": "Supporters by Season",
+      "description": "All supporters of e-gnition Hamburg, listed by season."
+    },
+    "alumni": {
+      "title": "Alumni Association",
+      "description": "The alumni and supporters' association of e-gnition Hamburg: former members and friends of the team."
+    },
+    "university": {
+      "title": "University Partners",
+      "description": "Our university partners: the universities that support e-gnition Hamburg."
+    },
+    "supportersdetail": {
+      "title": "Supporters Season {{season}}",
+      "description": "The sponsors and partners of e-gnition Hamburg in the {{season}} season."
+    },
+    "news": {
+      "title": "News and Newsletter",
+      "description": "News from e-gnition Hamburg and sign-up for our newsletter."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "How to reach e-gnition Hamburg: contact details and the team's contact persons."
+    },
+    "imprint": {
+      "title": "Imprint",
+      "description": "Legal notice of e-gnition Hamburg e.V."
+    },
+    "dataprotection": {
+      "title": "Data Protection",
+      "description": "Privacy policy of e-gnition Hamburg e.V.: information on how personal data is processed."
+    }
+  }
+}

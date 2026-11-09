@@ -1,0 +1,7 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <div style="white-space: pre-wrap;" [innerHTML]="data.message"></div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" cdkFocusInitial mat-dialog-close (click)="onDismiss()">OK</button>
+</div>

@@ -1,0 +1,556 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-primary: #02345F;
+  --color-primary-dark: #012746;
+  --color-accent: #85C440;
+  --color-accent-hover: #6FA832;
+  --color-secondary: #38C2D2;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F4F7F9;
+  --color-text: #243447;
+  --color-text-muted: #5B6773;
+  --color-border: #D8E0E6;
+  --radius-sm: 0.35rem;
+  --radius-md: 0.6rem;
+  --content-width: 72rem;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+body *:not(mat-icon):not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone) {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* Shared typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+h1 { font-size: 2.5rem !important; }
+h2 { font-size: 2rem !important; }
+h3 { font-size: 1.5rem !important; }
+h4 { font-size: 1.25rem !important; }
+h5, h6 { font-size: 1.1rem !important; }
+
+p, li, label, input, textarea, select {
+  font-size: 1rem;
+}
+
+p,
+li {
+  line-height: 1.6 !important;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+/* Shared button treatment; icon-only and modal-close buttons keep their own layout. */
+button:not([mat-icon-button]):not(.mat-icon-button):not(.close-button):not(.lang-btn),
+mat-button:not([mat-icon-button]),
+[mat-flat-button],
+.button,
+.cta-button,
+.fs-button,
+.joinus-button,
+.end-button {
+  border: 0;
+  border-radius: 999px !important;
+  background: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  cursor: pointer;
+  font-size: 1rem !important;
+  font-weight: 600;
+  line-height: 1.25;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+button:not([mat-icon-button]):not(.mat-icon-button):not(.close-button):not(.lang-btn):hover,
+button:not([mat-icon-button]):not(.mat-icon-button):not(.close-button):not(.lang-btn):focus-visible,
+[mat-flat-button]:hover,
+[mat-flat-button]:focus-visible,
+.button:hover,
+.button:focus-visible,
+.cta-button:hover,
+.cta-button:focus-visible,
+.fs-button:hover,
+.fs-button:focus-visible,
+.joinus-button:hover,
+.joinus-button:focus-visible,
+.end-button:hover,
+.end-button:focus-visible {
+  background: var(--color-accent-hover) !important;
+  box-shadow: 0 0.25rem 0.75rem rgba(2, 52, 95, 0.2);
+}
+
+/* Navigation and footer buttons use the same compact corner radius as all CTAs. */
+a.header-button,
+button.header-button {
+  border-radius: 999px !important;
+}
+
+/* Material buttons and links use the same pill shape as the other buttons. */
+a[mat-button],
+button[mat-button],
+a[mat-flat-button],
+button[mat-flat-button],
+button[mat-raised-button],
+button[mat-stroked-button] {
+  border-radius: 999px !important;
+}
+
+/* The language selector is a navigation control, not a green CTA button. */
+button.header-button.lang-btn:not([mat-icon-button]):not(.mat-icon-button),
+button.header-button.lang-btn:not([mat-icon-button]):not(.mat-icon-button):hover,
+button.header-button.lang-btn:not([mat-icon-button]):not(.mat-icon-button):focus-visible {
+  background: var(--color-primary) !important;
+  background-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
+}
+
+/* Keep the Formula Student CTA centered despite the shared inline-flex button rule. */
+button.fs-button {
+  display: flex !important;
+  width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Shared hero/banner treatment */
+.header-image-container {
+  background: var(--color-primary);
+  overflow: hidden;
+}
+
+.header-image,
+.header-image-container > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.header-copyright {
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem !important;
+  line-height: 1.3;
+}
+
+/* One consistent copyright badge for every image source. */
+.header-copyright,
+.fs-copyright,
+.landingpage-copyright {
+  background: rgba(0, 0, 0, 0.55) !important;
+  border-radius: var(--radius-sm) !important;
+  color: #FFFFFF !important;
+  display: block !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 0.75rem !important;
+  line-height: 1.3 !important;
+  padding: 0.25rem 0.5rem !important;
+  position: absolute !important;
+  right: 0.75rem !important;
+  bottom: 0.5rem !important;
+  text-align: left !important;
+  z-index: 2 !important;
+}
+
+/* Landing page hero and headline text stay readable on image/dark backgrounds. */
+.banner__content,
+.banner__eyebrow,
+.banner__title,
+.lp-subtitle,
+.lp-headline {
+  color: #FFFFFF !important;
+}
+
+.banner__content,
+.banner__content * {
+  color: #FFFFFF !important;
+}
+
+.banner__title {
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+}
+
+/* Fade the hero images, not their text. A parent opacity would make white text look grey. */
+.banner__slide {
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+.banner__slide img {
+  opacity: 0;
+  animation: hero-image-fade 15s infinite;
+}
+
+.banner__slide:nth-child(1) img,
+.banner__slide:nth-child(1) .banner__content,
+.banner__slide:nth-child(1) .landingpage-copyright {
+  animation-delay: 0s;
+}
+
+.banner__slide:nth-child(2) img,
+.banner__slide:nth-child(2) .banner__content,
+.banner__slide:nth-child(2) .landingpage-copyright {
+  animation-delay: 5s;
+}
+
+.banner__slide:nth-child(3) img,
+.banner__slide:nth-child(3) .banner__content,
+.banner__slide:nth-child(3) .landingpage-copyright {
+  animation-delay: 10s;
+}
+
+.banner__content,
+.landingpage-copyright {
+  opacity: 0;
+  animation: hero-text-display 15s infinite;
+}
+
+@keyframes hero-image-fade {
+  0%, 4% { opacity: 0; }
+  10%, 29% { opacity: 1; }
+  36%, 100% { opacity: 0; }
+}
+
+@keyframes hero-text-display {
+  0%, 4% { opacity: 0; }
+  10%, 29% { opacity: 1; }
+  36%, 100% { opacity: 0; }
+}
+
+.subtitle {
+  color: #FFFFFF;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2;
+  padding: 2rem 1rem 1rem;
+}
+
+/* All page-level titles use the same visual hierarchy. */
+.lp-headline,
+.fs-subtitle,
+.joinus-title,
+.findus-title {
+  color: #FFFFFF !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-align: center;
+  margin-bottom: 1.5rem !important;
+}
+
+.sponsor-more-button,
+.sponsor-contact-button,
+.footer-main .header-button {
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.sponsor-more-button:hover,
+.sponsor-contact-button:hover,
+.footer-main .header-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Consistent section and card headings across all components. */
+.section-title,
+.dept-title,
+.supporter-title,
+.modal-header h2,
+.joinus-subtitle,
+.lp-team__heading,
+.event-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Keep the landing-page intro aligned with the other centered page sections. */
+.lp-team {
+  text-align: center;
+}
+
+.lp-team__eyebrow,
+.lp-team__heading {
+  text-align: center;
+}
+
+.lp-stats {
+  text-align: center;
+  width: min(86%, 68rem);
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.lp-stat {
+  align-items: center;
+  text-align: center;
+}
+
+.lp-stat__label {
+  color: #FFFFFF !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+.landingpage-text {
+  width: min(92%, 75rem) !important;
+  margin: 0 auto !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  text-align: justify !important;
+}
+
+/* Keep prose blocks consistent across all content pages. */
+.text,
+.fs-text,
+.joinus-text,
+.legal-text {
+  width: min(92%, 75rem) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  text-align: justify !important;
+}
+
+.legal-text {
+  padding: 1.25rem 0;
+  color: #FFFFFF;
+}
+
+.text p,
+.fs-text p,
+.joinus-text,
+.landingpage-text p {
+  margin-bottom: 1rem;
+}
+
+.landingpage-text ul,
+.text ul,
+.row-text ul {
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.landingpage-text li,
+.text li,
+.row-text li {
+  margin-bottom: 0.4rem;
+}
+
+.text,
+.row-text {
+  font-size: 1rem !important;
+  line-height: 1.7;
+}
+
+.panel-title {
+  font-size: 1.5rem !important;
+}
+
+.background-blue,
+.panel-blue {
+  background-color: var(--color-primary);
+}
+
+.panel-white,
+.row-container {
+  background-color: var(--color-surface);
+}
+
+@media (max-width: 650px) {
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.65rem !important; }
+  h3 { font-size: 1.3rem !important; }
+
+  .subtitle {
+    font-size: 1.65rem !important;
+  }
+
+  .lp-stats {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.header-copyright {
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3em 0.7em;
+  border-radius: 0.3em;
+  display: block;
+  text-align: right;
+  pointer-events: none;
+}
+
+.subtitle {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0.2em auto;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.2em;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  max-height: 40vh;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 2em;
+}
+
+.background-blue {
+  background-color: #02345F;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.row-image img {
+  max-width: 100%;
+  max-height: 38vh;
+  height: auto;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.row-text {
+  flex: 2 1 67%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2em;
+  padding: 2em;
+  color: #02345F;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.panel-icon {
+  max-width: 12em;
+  height: 8em;
+  object-fit: contain;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.panel-blue {
+  background-color: #02345F;
+}
+
+.panel-white {
+  background-color: #fff;
+}
+
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+.panel-title-blue {
+  color: #02345F;
+}
+
+.panel-title-white {
+  color: #fff;
+}

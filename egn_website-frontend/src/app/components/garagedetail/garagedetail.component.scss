@@ -1,0 +1,125 @@
+/* ===== Layout Grundgerüst – flüssig statt fixer Prozentwerte ===== */
+.car-detail {
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.car-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.car-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.car-hero__overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: clamp(0.75rem, 3vw, 1.5rem);
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.car-hero__title {
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ===== Sections ===== */
+.car-section {
+  margin-block: 2rem;
+}
+
+.car-section__inner {
+  color: #fff;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.section-title {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* ===== Tabellen – responsive, kein horizontales Overflow-Risiko ===== */
+.car-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.car-details-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.car-details-table th,
+.car-details-table td {
+  padding: 0.6em 0.75em;
+  text-align: left;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.car-details-table th {
+  font-weight: 600;
+  width: 40%;
+}
+
+/* ===== Listen – einheitlich für events, advancements, achievements ===== */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.info-list li {
+  padding: 0.4em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+/* ===== Accessibility Helper ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ===== Kleine Screens ===== */
+@media (max-width: 480px) {
+  .car-hero {
+    aspect-ratio: 4 / 3;
+    border-radius: 0;
+  }
+
+  .car-details-table th,
+  .car-details-table td {
+    padding: 0.5em 0.4em;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Große Screens: etwas mehr Luft ===== */
+@media (min-width: 1024px) {
+  .car-detail {
+    padding-block: 2rem;
+  }
+}

@@ -1,0 +1,193 @@
+/* Unified content wrapper overlapping hero image slightly */
+.joinus-content-wrapper {
+  position: relative;
+  margin-top: -11rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .joinus-content-wrapper {
+    margin-top: -1.6rem;
+  }
+}
+
+.joinus-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Wrapper adds bottom fade and positions overlap */
+.joinus-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.joinus-image-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 22%;
+  background: linear-gradient(to bottom, rgba(2, 52, 95, 0) 0%, #02345F 90%);
+  pointer-events: none;
+}
+
+.joinus-image {
+  /* Use mask for cleaner fade where supported */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 78%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 78%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Modest overlap using negative margin */
+.joinus-title,
+.joinus-subtitle,
+.joinus-text {
+  position: relative;
+}
+
+/* Remove per-heading negative margins (handled by wrapper) */
+
+.joinus-title {
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+.joinus-subtitle {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.joinus-text {
+  width: 80%;
+  font-size: 1.2em;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 1em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.joinus-button {
+  margin: 5em auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+  padding: 1.6em 2.6em;
+  min-height: 4.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-color: #38C2D2;
+  text-decoration: none;
+  border-radius: 1.5em;
+  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.joinus-button:hover,
+.joinus-button:focus-visible {
+  background-color: #2eb5c5;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px -4px rgba(0, 0, 0, 0.55), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.joinus-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.5), 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.joinus-link-btn {
+  text-decoration: none;
+}
+
+.joinus-link-btn:focus-visible {
+  outline: none;
+}
+
+.joinus-button--top {
+  margin-top: 1em;
+}
+
+.joinus-button--bottom {
+  margin-top: 1em;
+}
+
+/* Top button wrapper spacing */
+.joinus-top-button-wrapper {
+  width: 80%;
+  margin: 0 auto 1em auto;
+  display: flex;
+  justify-content: center;
+}
+
+.joinus-button--top {
+  margin: 0;
+  padding: 0.25em 1.2em;
+  font-size: 2em;
+}
+
+/* General text containers (existing .text class assumed in HTML) */
+.text {
+  width: 80%;
+  margin: 0 auto 2em auto;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 1.05em;
+}
+
+.text p {
+  line-height: 1.5;
+}
+
+.text ul {
+  padding-left: 1.2em;
+  margin: 0.6em 0;
+  line-height: 1.5;
+}
+
+.text li {
+  margin: 0.3em 0;
+  line-height: 1.5;
+}
+
+/* Subtitle (reuse existing class) */
+.subtitle {
+  display: block;
+  width: 80%;
+  margin: 2em auto 0.6em auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color: #fff;
+  line-height: 1.2;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+
+  .joinus-text,
+  .text,
+  .subtitle,
+  .joinus-top-button-wrapper {
+    width: 90%;
+  }
+}

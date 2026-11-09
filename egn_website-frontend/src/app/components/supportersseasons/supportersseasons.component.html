@@ -1,0 +1,26 @@
+<div class="header-image-container">
+  <img ngSrc="assets/images/fsg_bigpic.jpg" alt="Formula Student Germany" class="header-image" height="1108" width="1440">
+  <span class="header-copyright">&copy; FSG Maru</span>
+</div>
+
+<span class="subtitle">{{ 'supportersseasons.subtitle' | translate }}</span>
+
+<div class="text">
+    <p [innerHTML]="'supportersseasons.text' | translate"></p>
+</div>
+
+<div class="car-grid">
+  <div class="car-item" *ngFor="let car of cars" (click)="navigateTo('supporters/' + car.season)">
+    <img [ngSrc]="car.image" [alt]="car.name" class="car-image" height="400" width="600" (click)="navigateTo('supporters/' + car.season)">
+    <div class="car-name" (click)="navigateTo('supporters/' + car.season)">{{ car.name }}</div>
+  </div>
+</div>
+
+
+<!--  <span class="subtitle">Wish to become part of our success story?</span>
+
+<span class="subtitle">Discover the opportunities to support us as a company:</span>
+
+TODO: FLYER -->
+
+

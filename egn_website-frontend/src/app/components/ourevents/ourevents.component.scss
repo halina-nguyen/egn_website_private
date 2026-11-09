@@ -1,0 +1,129 @@
+.fs-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fs-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.fs-copyright {
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Open Sans", serif;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3em 0.7em;
+  border-radius: 0.3em;
+  display: block;
+  text-align: right;
+  pointer-events: none;
+}
+
+.fs-subtitle {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0.2em auto;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.fs-text {
+  font-size: 1.2em;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.fs-row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  max-height: 40vh;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 2em;
+}
+
+.fs-row-image img {
+  max-width: 100%;
+  max-height: 38vh;
+  height: auto;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.fs-row-text {
+  flex: 2 1 67%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2em;
+  padding: 2em;
+  color: #02345F;
+  font-family: "Open Sans", sans-serif;
+}
+
+.fs-button {
+  background-color: #85C440;
+  margin: 5em auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.event-icon {
+  max-width: 12em;
+  height: 8em;
+  object-fit: contain;
+}
+
+.event-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.event-panel-blue {
+  background-color: #02345F;
+}
+
+.event-panel-white {
+  background-color: #fff;
+}
+
+.event-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+.event-title-blue {
+  color: #02345F;
+}
+
+.event-title-white {
+  color: #fff;
+}

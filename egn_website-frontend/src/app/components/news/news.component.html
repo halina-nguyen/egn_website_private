@@ -1,0 +1,55 @@
+<div class="header-image-container">
+  <img ngSrc="assets/news_images/Estering-Robert.webp" alt="Debugging the eg26" class="header-image" height="1108" width="1440">
+  <span class="header-copyright">&copy; Robert Oehlmann</span>
+</div>
+
+<span class="subtitle">{{ 'news.subtitle' | translate }}</span>
+
+<div class="text">
+  <p [innerHTML]="'news.text' | translate"></p>
+</div>
+
+<!-- TODO: Show list of newsletter articles -->
+
+<div id="mc_embed_shell" style="margin: 0 auto; margin-bottom: 20px; max-width: 600px; display: block;">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    #mc_embed_signup { background: #fff; clear: left; font: 14px "Open Sans", sans-serif; width: 100%; padding: 10px; box-sizing: border-box; }
+    #mc_embed_signup h2 { color: #02345f; text-align: center; }
+    #mc_embed_signup .mc-field-group { width: 100%; }
+    #mc_embed_signup input.email { background-color: #ffffff; border: 1px solid #02345f; color: #02345f; width: 100%; box-sizing: border-box; }
+    #mc_embed_signup .button { background-color: #02345f !important; color: #fff; display: block; margin: -10 auto; }
+    #mc_embed_signup .optionalParent { text-align: center; }
+  </style>
+  
+  <div id="mc_embed_signup">
+    <form action="https://egnition-hamburg.us13.list-manage.com/subscribe/post?u=376198cb6bd1007c42b770329&amp;id=5657e85571&amp;f_id=00df2beaf0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <div id="mc_embed_signup_scroll">
+        <h2>{{ 'ui.newsletter_heading' | translate }}</h2>
+        <div class="mc-field-group">
+          <label for="mce-EMAIL">{{ 'ui.email_address' | translate }} <span class="asterisk">*</span></label>
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="">
+        </div>
+        <div id="mce-responses" class="clear foot">
+          <div class="response" id="mce-error-response" style="display: none;"></div>
+          <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_376198cb6bd1007c42b770329_5657e85571" tabindex="-1" value="">
+        </div>
+        <div class="optionalParent">
+          <div class="clear foot">
+            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Abonnieren">
+            <p style="margin: 10px auto 0 auto;">
+              <a href="http://eepurl.com/xvZcvRKLBt" title="Mailchimp - email marketing made easy and fun">
+                <span style="display: inline-block; background-color: transparent; border-radius: 4px;">
+                  <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: inline-flex; padding: 2px 0px; justify-content: center; align-items: center;">
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

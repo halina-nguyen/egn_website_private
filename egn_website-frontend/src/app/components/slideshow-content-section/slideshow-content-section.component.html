@@ -1,0 +1,17 @@
+<section class="department-section" [ngClass]="[ 'theme-' + theme, 'image-' + imageAlign ]">
+  <div class="inner">
+    <div class="image-pane">
+      <div class="carousel" aria-hidden="true" *ngIf="images.length > 0">
+        <button *ngIf="images.length > 1" class="carousel-nav carousel-nav-left" (click)="previousImage()" [attr.aria-label]="'ui.previous_image' | translate">‹</button>
+        <button *ngIf="images.length > 1" class="carousel-nav carousel-nav-right" (click)="nextImage()" [attr.aria-label]="'ui.next_image' | translate">›</button>
+        <div class="carousel-track" [style.transform]="getCarouselTransform()">
+          <img *ngFor="let img of images" [ngSrc]="img" alt="{{title}} image" height="542" width="542">
+        </div>
+      </div>
+    </div>
+    <div class="text-pane">
+      <h3 class="dept-title" *ngIf="title">{{ title }}</h3>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</section>

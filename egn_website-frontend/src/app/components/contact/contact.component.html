@@ -1,0 +1,100 @@
+<div class="header-image-container">
+  <img ngSrc="assets/images/fsg_bigpic.jpg" alt="Formula Student Germany" class="header-image" height="1108" width="1440">
+  <span class="header-copyright">&copy; FSG Maru</span>
+</div>
+
+<div class="address-cards">
+  <mat-card appearance="outlined" class="address-card">
+    <mat-card-header>
+      <mat-card-title>
+        {{ 'contact.subtitle2' | translate }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        e-gnition Hamburg e.V.<br>
+        Technische Universität Hamburg<br>
+        Denickestraße 17<br>
+        21073 Hamburg
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="address-card">
+    <mat-card-header>
+      <mat-card-title>
+        {{ 'contact.subtitle3' | translate }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Technische Universität Hamburg<br>
+        Gebäude D<br>
+        Am Schwarzenbergcampus 4<br>
+        21073 Hamburg
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="address-card">
+    <mat-card-header>
+      <mat-card-title>
+        {{ 'contact.subtitle4' | translate }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        2. Stock<br>
+        Schlossmühlendamm 32<br>
+        21073 Hamburg
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<span class="subtitle">{{ 'contact.subtitle' | translate }}</span>
+
+<div class="text">
+  <p>
+    {{ 'contact.text' | translate }}<br>
+    <a href="mailto:kontakt@egnition.hamburg">kontakt&commat;egnition.hamburg</a>
+  </p>
+</div>
+
+<form class="form-container" #contactForm="ngForm" (ngSubmit)="sendContact(contactForm)" novalidate>
+  <mat-form-field appearance="fill" hideRequiredMarker>
+    <mat-label>{{ 'contact.lable' | translate }}</mat-label>
+    <input matInput type="text" name="firstName" [(ngModel)]="contact.name" required #name="ngModel">
+    <mat-error *ngIf="name.invalid">{{ 'required' | translate }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" hideRequiredMarker>
+    <mat-label>{{ 'contact.lable2' | translate }}</mat-label>
+    <input matInput type="email" name="email" [(ngModel)]="contact.email" required email #email="ngModel">
+    <mat-error *ngIf="email.hasError('required')">{{ 'required' | translate }}</mat-error>
+    <mat-error *ngIf="email.hasError('email')">{{ 'contact.invalidEmail' | translate }}</mat-error>
+  </mat-form-field>
+
+  <!-- Telefon bleibt optional -->
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'contact.lable3' | translate }}</mat-label>
+    <input matInput type="tel" name="phone" [(ngModel)]="contact.phone">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" hideRequiredMarker>
+    <mat-label>{{ 'contact.lable4' | translate }}</mat-label>
+    <input matInput type="text" name="subject" [(ngModel)]="contact.subject" required #subject="ngModel">
+    <mat-error *ngIf="subject.invalid">{{ 'required' | translate }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" hideRequiredMarker>
+    <mat-label>{{ 'contact.lable5' | translate }}</mat-label>
+    <textarea matInput name="message" [(ngModel)]="contact.message" required #message="ngModel"></textarea>
+    <mat-error *ngIf="message.invalid">{{ 'required' | translate }}</mat-error>
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+    {{ 'contact.lable6' | translate }}
+  </button>
+</form>

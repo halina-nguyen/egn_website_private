@@ -1,0 +1,57 @@
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 50px 0;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.address-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Auf kleinen Bildschirmen untereinander
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.address-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem auto 2.5rem;   // auto = zentriert
+  width: 100%;
+  max-width: 1200px;             // Gesamtbreite begrenzen -> Karten schmaler
+  padding: 0 1.5rem;            // Abstand zum Rand (v. a. auf kleinen Bildschirmen)
+  box-sizing: border-box;
+
+  // Auf kleinen Bildschirmen untereinander
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    max-width: 420px;           // einzelne Karte nicht zu breit
+  }
+}
+
+.address-card {
+  height: 100%;
+  min-width: 0;
+
+  mat-card-content p {
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.address-card mat-card-title {
+  margin-bottom: 12px;
+}
